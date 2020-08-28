@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace LeetCode.Algorhythms
+namespace LeetCode.Algorithms
 {
     public class MostCommonWord
     {

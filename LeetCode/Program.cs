@@ -1,4 +1,4 @@
-﻿using LeetCode.Algorhythms;
+﻿using LeetCode.Algorithms;
 using System;
 
 namespace LeetCode

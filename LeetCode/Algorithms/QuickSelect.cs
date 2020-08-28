@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LeetCode.Algorhythms
+namespace LeetCode.Algorithms
 {
     public class QuickSelect
     {

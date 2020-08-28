@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace LeetCode.Algorhythms
+namespace LeetCode.Algorithms
 {
     public class PathSum
     {
