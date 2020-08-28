@@ -13,6 +13,7 @@ namespace LeetCode
             QuickSelect.RunCode();
             ReverseLinkedList.RunCode();
             MostCommonWord.RunCode();
+            SingleNumber.RunCode();
             Console.WriteLine("Program completed");
             Console.Read();
         }
