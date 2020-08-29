@@ -15,6 +15,12 @@ namespace LeetCode
             MostCommonWord.RunCode();
             SingleNumber.RunCode();
             PowerOfTwo.RunCode();
+            ClimbingStairs.RunCode();
+            LetterPhone.RunCode();
+            LowestCommonAncestor.RunCode();
+            JewelsStones.RunCode();
+            FloodFill.RunCode();
+            KClosestPoints.RunCode();
             Console.WriteLine("Program completed");
             Console.Read();
         }

@@ -57,16 +57,4 @@ namespace LeetCode.Algorithms
             FindPaths(node.right, sum - node.val, new List<int>(current), paths);
         }
     }
-
-    class TreeNode
-    {
-        public int val;
-        public TreeNode left;
-        public TreeNode right;
-
-        public TreeNode(int x)
-        {
-            val = x;
-        }
-    }
 }
