@@ -35,6 +35,22 @@ namespace LeetCode.Algorithms
 
         static int[][] GetKClosestPoints(int[][] points, int k)
         {
+            /* Java:
+             * PriorityQueue<int[]> maxHeap = new PriorityQueue<>((a, b) -> b[0] * b[0] + b[1] * b[1] - (a[0] * a[0] - a[1] * a[1])));
+             * for (int[] point: points) {
+             *     maxHeap.add(point);
+             *     if (maxHeap.size() > k) {
+             *         maxHeap.remove();
+             *     }
+             * }
+             * 
+             * int[][] result = new int[k][2];
+             * while (k-- > 0) {
+             *     result[k] = maxHeap.remove();
+             * }
+             * 
+             * return result;
+             */
             int[][] result = new int[k][];
             SortedDictionary<int, int[]> sd = new SortedDictionary<int, int[]>();
 
