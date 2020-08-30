@@ -4,6 +4,7 @@ namespace LeetCode.Algorithms
 {
     public class PowerOfTwo
     {
+        // LeetCode #231. Power of Two
         public static void RunCode()
         {
             Print(21564367);

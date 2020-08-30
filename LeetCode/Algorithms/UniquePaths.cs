@@ -4,6 +4,7 @@ namespace LeetCode.Algorithms
 {
     public class UniquePaths
     {
+        // LeetCode #62. Unique Paths
         public static void RunCode()
         {
             int numberOfRows = 5;

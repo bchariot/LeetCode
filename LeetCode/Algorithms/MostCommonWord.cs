@@ -5,6 +5,7 @@ namespace LeetCode.Algorithms
 {
     public class MostCommonWord
     {
+        // LeetCode #819. Most Common Word
         public static void RunCode()
         {
             string paragraph = @"
@@ -22,7 +23,7 @@ namespace LeetCode.Algorithms
                 He capers nimbly in a lady's chamber
                 To the lascivious pleasing of a lute.";
             string[] banned = new string[] { "this", "that", "these", "those", "the", "a" };
-            Console.WriteLine($"    MostCommonWord from:\n{paragraph}\n\n           *** {GetMostCommonWord(paragraph, banned)} ***");
+            Console.WriteLine($"    MostCommonWord: {GetMostCommonWord(paragraph, banned)}");
         }
 
         static string GetMostCommonWord(string paragraph, string[] banned)
