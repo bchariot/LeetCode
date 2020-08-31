@@ -28,6 +28,19 @@ namespace LeetCode
             SymmetricTree.RunCode();
             SortArrayByParity.RunCode();
             CombinationSum.RunCode();
+            WordSearch.RunCode();
+            PartitionLabels.RunCode();
+            LongestCommonPrefix.RunCode();
+            SubSets.RunCode();
+            CoinChange.RunCode();
+            BinaryTreeRightSideView.RunCode();
+            RemoveVowels.RunCode();
+            MinimumPathSum.RunCode();
+            BinaryTreePath.RunCode();
+            ReverseVowels.RunCode();
+            IntersectionTwoLinkedLists.RunCode();
+            RangeSumOfBST.RunCode();
+            LastStoneWeight.RunCode();
             Console.WriteLine("Program completed");
             Console.Read();
         }
