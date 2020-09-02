@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LeetCode.Utils;
+using System;
 using System.Collections.Generic;
 
 namespace LeetCode.Algorithms
@@ -8,12 +9,7 @@ namespace LeetCode.Algorithms
         // LeetCode #. Test
         public static void RunCode()
         {
-            TreeNode root = new TreeNode(10);   //          10
-            root.left = new TreeNode(5);        //         /  \
-            root.right = new TreeNode(15);      //        5    15
-            root.left.left = new TreeNode(3);   //       / \    \
-            root.left.right = new TreeNode(7);  //      3   7    18
-            root.right.right = new TreeNode(18);
+            TreeNode root = Populate.Tree(new int?[] { 10, 5, 15, 3, 7, null, 18 });
             int l = 7;
             int r = 15;
             Console.WriteLine($"    RangeSumOfBST queue: {GetRangeSumOfBST1(root, l, r)}");

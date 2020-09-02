@@ -1,8 +1,8 @@
 ﻿namespace LeetCode.Algorithms
 {
-    public class Test
+    public class Template
     {
-        // LeetCode #. Test
+        // LeetCode #. Template
         public static void RunCode()
         {
         }

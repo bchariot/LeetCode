@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LeetCode.Utils;
+using System;
 using System.Collections.Generic;
 
 namespace LeetCode.Algorithms
@@ -9,18 +10,8 @@ namespace LeetCode.Algorithms
         {
             // LeetCode #113. Path Sum II
             int sum = 22;
-            TreeNode node = new TreeNode(5);          //              5
-            node.left = new TreeNode(4);              //             / \
-            node.left.left = new TreeNode(11);        //            4   8
-            node.left.left.left = new TreeNode(7);    //           /   / \
-            node.left.left.right = new TreeNode(2);   //          11  13  4
-            node.right = new TreeNode(8);             //         /  \    / \
-            node.right.left = new TreeNode(13);       //        7    2  5   1
-            node.right.right = new TreeNode(4);
-            node.right.right.left = new TreeNode(5);
-            node.right.right.right = new TreeNode(1);
-
-            List<List<int>> paths = GetPathSum(node, sum);
+            TreeNode root = Populate.Tree(new int?[] { 5, 4, 8, 11, null, 13, 4, 7, 2, null, null, 5, 1 });
+            List<List<int>> paths = GetPathSum(root, sum);
 
             foreach (List<int> path in paths)
             {

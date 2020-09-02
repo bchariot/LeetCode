@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LeetCode.Utils;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -9,6 +10,7 @@ namespace LeetCode.Algorithms
         // LeetCode #257. Binary Tree Paths
         public static void RunCode()
         {
+            TreeNode s = Populate.Tree(new int?[] { 1, 2, 3, null, 5 });
             TreeNode root = new TreeNode(1);              //       1
             root.left = new TreeNode(2);                  //      / \
             root.right = new TreeNode(3);                 //     2   3

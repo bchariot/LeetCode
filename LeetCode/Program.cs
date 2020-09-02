@@ -8,42 +8,92 @@ namespace LeetCode
         static void Main(string[] args)
         {
             Console.WriteLine("Program started");
-            UniquePaths.RunCode();
-            PathSum.RunCode();
-            QuickSelect.RunCode();
-            ReverseLinkedList.RunCode();
-            MostCommonWord.RunCode();
-            SingleNumber.RunCode();
-            PowerOfTwo.RunCode();
-            ClimbingStairs.RunCode();
-            LetterPhone.RunCode();
-            LowestCommonAncestor.RunCode();
-            JewelsStones.RunCode();
-            FloodFill.RunCode();
-            KClosestPoints.RunCode();
-            MaxAreaOfIsland.RunCode();
-            MissingNumber.RunCode();
-            RemoveElement.RunCode();
-            GroupedAnagrams.RunCode();
-            SymmetricTree.RunCode();
-            SortArrayByParity.RunCode();
-            CombinationSum.RunCode();
-            WordSearch.RunCode();
-            PartitionLabels.RunCode();
-            LongestCommonPrefix.RunCode();
-            SubSets.RunCode();
-            CoinChange.RunCode();
-            BinaryTreeRightSideView.RunCode();
-            RemoveVowels.RunCode();
-            MinimumPathSum.RunCode();
-            BinaryTreePath.RunCode();
-            ReverseVowels.RunCode();
-            IntersectionTwoLinkedLists.RunCode();
-            RangeSumOfBST.RunCode();
-            LastStoneWeight.RunCode();
-            MinimumCostConnectSticks.RunCode();
+            RunDynamicProgramming();
+            RunHastSets();
+            RunListNodes();
+            RunMisc();
+            RunQueues();
+            RunRecursion();
+            RunStacks();
+            RunStrings();
+            RunTreeNodes();
             Console.WriteLine("Program completed");
             Console.Read();
+        }
+
+        static void RunDynamicProgramming()
+        {
+            ClimbingStairs.RunCode();
+            CoinChange.RunCode();
+            MinimumPathSum.RunCode();
+            UniquePaths.RunCode();
+        }
+
+        static void RunHastSets()
+        {
+            MissingNumber.RunCode();
+            MostCommonWord.RunCode();
+            RemoveVowels.RunCode();
+            ReverseVowels.RunCode();
+            SingleNumber.RunCode();
+        }
+
+        static void RunListNodes()
+        {
+            IntersectionTwoLinkedLists.RunCode();
+            ReverseLinkedList.RunCode();
+        }
+
+        static void RunMisc()
+        {
+            GroupedAnagrams.RunCode();
+            MinimumDominoRotations.RunCode();
+            PowerOfTwo.RunCode();
+            QuickSelect.RunCode();
+            RemoveElement.RunCode();
+            SortArrayByParity.RunCode();
+            WordSearch.RunCode();
+        }
+
+        static void RunQueues()
+        {
+            KClosestPoints.RunCode();
+            LastStoneWeight.RunCode();
+            MinimumCostConnectSticks.RunCode();
+            ReorganizeString.RunCode();
+        }
+
+        static void RunRecursion()
+        {
+            CombinationSum.RunCode();
+            FloodFill.RunCode();
+            LetterPhone.RunCode();
+            MaxAreaOfIsland.RunCode();
+            SubSets.RunCode();
+        }
+
+        static void RunStacks()
+        {
+            AsteroidCollision.RunCode();
+        }
+
+        static void RunStrings()
+        {
+            JewelsStones.RunCode();
+            LongestCommonPrefix.RunCode();
+            PartitionLabels.RunCode();
+        }
+
+        static void RunTreeNodes()
+        {
+            BinaryTreePath.RunCode();
+            BinaryTreeRightSideView.RunCode();
+            LowestCommonAncestor.RunCode();
+            PathSum.RunCode();
+            RangeSumOfBST.RunCode();
+            SubtreeOfAnotherTree.RunCode();
+            SymmetricTree.RunCode();
+            ValidateBinarySearchTree.RunCode();
         }
     }
 }
