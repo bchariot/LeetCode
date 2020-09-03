@@ -11,7 +11,7 @@ namespace LeetCode.Utils
             return Tree(nums, new TreeNode(nums[0].Value), 0);
         }
 
-        public static TreeNode Tree(int?[] nums, TreeNode root, int i)
+        static TreeNode Tree(int?[] nums, TreeNode root, int i)
         {
             if (i < nums.Length && nums[i].HasValue)
             {
@@ -23,12 +23,12 @@ namespace LeetCode.Utils
             return root;
         }
 
-        public static ListNode List(int[] nums)
+        public static ListNode Node(int[] nums)
         {
             return Node(nums, new ListNode(nums[0]), 0);
         }
 
-        public static ListNode Node(int[] nums, ListNode root, int i)
+        static ListNode Node(int[] nums, ListNode root, int i)
         {
             if (i < nums.Length)
             {

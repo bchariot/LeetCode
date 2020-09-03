@@ -25,6 +25,7 @@ namespace LeetCode
         {
             ClimbingStairs.RunCode();
             CoinChange.RunCode();
+            HouseRobber.RunCode();
             MinimumPathSum.RunCode();
             UniquePaths.RunCode();
         }
@@ -51,6 +52,7 @@ namespace LeetCode
             PowerOfTwo.RunCode();
             QuickSelect.RunCode();
             RemoveElement.RunCode();
+            RobotReturnToOrigin.RunCode();
             SortArrayByParity.RunCode();
             WordSearch.RunCode();
         }
