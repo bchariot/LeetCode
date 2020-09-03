@@ -1,6 +1,6 @@
-﻿using System;
+﻿using LeetCode.Utils;
+using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace LeetCode.Algorithms
 {
@@ -10,17 +10,7 @@ namespace LeetCode.Algorithms
         public static void RunCode()
         {
             string digits = "23";
-            Console.WriteLine($"    LetterPhone for \"{digits}\": {Print(GetLetterPhone(digits))}");
-        }
-
-        static string Print(List<string> result)
-        {
-            StringBuilder sb = new StringBuilder();
-            foreach (string str in result)
-            {
-                sb.Append("\"" + str + "\" ");
-            }
-            return sb.ToString();
+            Console.WriteLine($"    LetterPhone for \"{digits}\": {Print.ListString(GetLetterPhone(digits))}");
         }
 
         static List<string> GetLetterPhone(string digits)

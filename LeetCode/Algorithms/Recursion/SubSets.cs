@@ -1,7 +1,7 @@
-﻿using System;
+﻿using LeetCode.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace LeetCode.Algorithms
 {
@@ -11,26 +11,7 @@ namespace LeetCode.Algorithms
         public static void RunCode()
         {
             List<int> nums = (new int[] { 1, 2, 3 }).ToList<int>();
-            Console.WriteLine($"    SubSets [1, 2, 3]: {Print(GetSubSets(nums))}");
-        }
-
-        static string Print(List<List<int>> list)
-        {
-            StringBuilder sb = new StringBuilder();
-
-            sb.Append("[");
-            foreach (List<int> subList in list)
-            {
-                sb.Append("[");
-                foreach (int num in subList)
-                {
-                    sb.Append(num + ", ");
-                }
-                sb.Append("], ");
-            }
-            sb.Append("]");
-
-            return sb.ToString().Replace(", ]", "]");
+            Console.WriteLine($"    SubSets [1, 2, 3]: {Print.ListListInt(GetSubSets(nums))}");
         }
 
         static List<List<int>> GetSubSets(List<int> nums)

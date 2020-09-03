@@ -1,7 +1,6 @@
 ﻿using LeetCode.Utils;
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace LeetCode.Algorithms
 {
@@ -10,31 +9,13 @@ namespace LeetCode.Algorithms
         // LeetCode #257. Binary Tree Paths
         public static void RunCode()
         {
-            TreeNode s = Populate.Tree(new int?[] { 1, 2, 3, null, 5 });
-            TreeNode root = new TreeNode(1);              //       1
-            root.left = new TreeNode(2);                  //      / \
-            root.right = new TreeNode(3);                 //     2   3
-            root.left.right = new TreeNode(5);            //      \
-            List<string> paths = GetBinaryTreePath(root); //       5
-            Console.WriteLine($"    BinaryTreePaths: {Print(paths)}");
-        }
-
-        static string Print(List<string> paths)
-        {
-            StringBuilder sb = new StringBuilder();
-            sb.Append("[");
-            foreach (string path in paths)
-            {
-                sb.Append("\"" + path + "\", ");
-            }
-            sb.Append("]");
-            return sb.ToString().Replace(", ]", "]");
+            TreeNode root = Populate.Tree(new int?[] { 1, 2, 3, null, 5 });
+            Console.WriteLine($"    BinaryTreePaths: {Print.ListString(GetBinaryTreePath(root))}");
         }
 
         static List<string> GetBinaryTreePath(TreeNode root)
         {
             List<string> paths = new List<string>();
-
             RecursiveCall(root, "", paths);
             return paths;
         }

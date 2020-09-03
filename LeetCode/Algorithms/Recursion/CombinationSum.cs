@@ -1,7 +1,7 @@
-﻿using System;
+﻿using LeetCode.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace LeetCode.Algorithms
 {
@@ -12,30 +12,10 @@ namespace LeetCode.Algorithms
         {
             List<int> candidates = (new int[] { 10, 1, 2, 7, 6, 1, 5 }).ToList<int>();
             int target = 8;
-            Console.WriteLine($"    CombinationSum [10, 1, 2, 7, 6, 1, 5] target 8: {Print(GetCombinationSum(candidates, target))}");
-
+            Console.WriteLine($"    CombinationSum {Print.ListInt(candidates)} target 8: {Print.ListListInt(GetCombinationSum(candidates, target))}");
             candidates = (new int[] { 2, 5, 2, 1, 2 }).ToList<int>();
             target = 5;
-            Console.WriteLine($"    CombinationSum [2, 5, 2, 1, 2] target 5: {Print(GetCombinationSum(candidates, target))}");
-        }
-
-        static string Print(List<List<int>> list)
-        {
-            StringBuilder sb = new StringBuilder();
-
-            sb.Append("[");
-            foreach (List<int> subList in list)
-            {
-                sb.Append("[");
-                foreach (int num in subList)
-                {
-                    sb.Append(num + ", ");
-                }
-                sb.Append("], ");
-            }
-            sb.Append("]");
-
-            return sb.ToString().Replace(", ]", "]");
+            Console.WriteLine($"    CombinationSum {Print.ListInt(candidates)} target 5: {Print.ListListInt(GetCombinationSum(candidates, target))}");
         }
 
         static List<List<int>> GetCombinationSum(List<int> candidates, int target)

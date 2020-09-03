@@ -7,12 +7,9 @@ namespace LeetCode.Algorithms
         // LeetCode #231. Power of Two
         public static void RunCode()
         {
-            Print(21564367);
-            Print(33554432);
-        }
-
-        static void Print(int n)
-        {
+            int n = 21564367;
+            Console.WriteLine($"    PowerOfTwo {n} Loop: {IsPowerOfTwoLoop(n)} BitCompare: {IsPowerOfTwoBitCompare(n)}");
+            n = 33554432;
             Console.WriteLine($"    PowerOfTwo {n} Loop: {IsPowerOfTwoLoop(n)} BitCompare: {IsPowerOfTwoBitCompare(n)}");
         }
 

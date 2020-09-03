@@ -1,6 +1,6 @@
-﻿using System;
+﻿using LeetCode.Utils;
+using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace LeetCode.Algorithms
 {
@@ -10,19 +10,7 @@ namespace LeetCode.Algorithms
         public static void RunCode()
         {
             string s = "ababcbacadefegdehijhklij";
-            Console.WriteLine($"    PartitionLabels \"{s}\": {Print(GetPartitionLabels(s))}");
-        }
-
-        static string Print(List<int> list)
-        {
-            StringBuilder sb = new StringBuilder();
-            sb.Append("[");
-            foreach (int num in list)
-            {
-                sb.Append(num + ", ");
-            }
-            sb.Append("]");
-            return sb.ToString().Replace(", ]", "]");
+            Console.WriteLine($"    PartitionLabels \"{s}\": {Print.ListInt(GetPartitionLabels(s))}");
         }
 
         static List<int> GetPartitionLabels(string s)

@@ -75,13 +75,16 @@ namespace LeetCode
         static void RunStacks()
         {
             AsteroidCollision.RunCode();
+            FrogJump.RunCode();
         }
 
         static void RunStrings()
         {
+            FirstUniqueCharacter.RunCode();
             JewelsStones.RunCode();
             LongestCommonPrefix.RunCode();
             PartitionLabels.RunCode();
+            StringCompression.RunCode();
         }
 
         static void RunTreeNodes()

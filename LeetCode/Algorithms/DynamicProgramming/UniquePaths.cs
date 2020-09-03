@@ -7,14 +7,13 @@ namespace LeetCode.Algorithms
         // LeetCode #62. Unique Paths
         public static void RunCode()
         {
-            int numberOfRows = 5;
+            int numberOfRows = 6;
             int numberOfColumns = 5;
-
-            int uniquePaths = GetUniquePaths(numberOfRows, numberOfColumns);
-            Console.WriteLine($"    Number of unique paths for matrix of {numberOfRows} rows by {numberOfColumns} columns: {uniquePaths}");
+            Console.WriteLine($"    UniquePaths dynamic for {numberOfRows} x {numberOfColumns}: {GetUniquePaths1(numberOfRows, numberOfColumns)}");
+            Console.WriteLine($"    UniquePaths (n k) for {numberOfRows} x {numberOfColumns}: {GetUniquePaths2(numberOfRows, numberOfColumns)}");
         }
 
-        public static int GetUniquePaths(int rows, int columns)
+        public static int GetUniquePaths1(int rows, int columns)
         {
             int[,] dp = new int[rows, columns];
 
@@ -38,6 +37,22 @@ namespace LeetCode.Algorithms
             }
 
             return dp[rows - 1, columns - 1];
+        }
+
+        public static int GetUniquePaths2(int rows, int columns)
+        {
+            return NChooseK((rows - 1) + (columns - 1), (rows - 1));
+        }
+
+        public static int NChooseK(int N, int K)
+        {
+            int result = 1;
+            for (int i = 1; i <= K; i++)
+            {
+                result *= N - (K - i);
+                result /= i;
+            }
+            return result;
         }
     }
 }

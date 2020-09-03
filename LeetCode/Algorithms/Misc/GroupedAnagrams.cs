@@ -1,7 +1,7 @@
-﻿using System;
+﻿using LeetCode.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace LeetCode.Algorithms
 {
@@ -11,26 +11,7 @@ namespace LeetCode.Algorithms
         public static void RunCode()
         {
             List<string> strs = (new string[] { "eat", "tea", "tan", "ate", "nat", "bat" }).ToList();
-            Console.WriteLine($"    GroupedAnagrams {Print(GetGroupedAnagrams(strs))}");
-        }
-
-        static string Print(List<List<string>> list)
-        {
-            StringBuilder sb = new StringBuilder();
-
-            sb.Append("[");
-            foreach (List<string> subList in list)
-            {
-                sb.Append("[");
-                foreach (string str in subList)
-                {
-                    sb.Append("\"" + str + "\", ");
-                }
-                sb.Append("], ");
-            }
-            sb.Append("]");
-
-            return sb.ToString().Replace(", ]", "]");
+            Console.WriteLine($"    GroupedAnagrams {Print.ListListString(GetGroupedAnagrams(strs))}");
         }
 
         static List<List<string>> GetGroupedAnagrams(List<string> strs)

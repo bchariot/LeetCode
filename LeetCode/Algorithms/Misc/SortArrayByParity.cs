@@ -1,5 +1,5 @@
-﻿using System;
-using System.Text;
+﻿using LeetCode.Utils;
+using System;
 
 namespace LeetCode.Algorithms
 {
@@ -9,20 +9,7 @@ namespace LeetCode.Algorithms
         public static void RunCode()
         {
             int[] nums = new int[] { 3, 1, 2, 4 };
-            Console.WriteLine($"    SortArrayByParity [3, 1, 2, 4]: {Print(GetSortArrayByParity(nums))}");
-        }
-
-        static string Print(int[] nums)
-        {
-            StringBuilder sb = new StringBuilder();
-            sb.Append("[");
-            foreach (int num in nums)
-            {
-                sb.Append(num + ", ");
-            }
-            sb.Append("]");
-
-            return sb.ToString().Replace(", ]", "]");
+            Console.WriteLine($"    SortArrayByParity [3, 1, 2, 4]: {Print.IntArray(GetSortArrayByParity(nums))}");
         }
 
         static int[] GetSortArrayByParity(int[] nums)

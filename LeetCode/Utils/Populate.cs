@@ -6,22 +6,53 @@ namespace LeetCode.Utils
 {
     public class Populate
     {
-        public static TreeNode Tree(int?[] arr)
+        public static TreeNode Tree(int?[] nums)
         {
-            return Tree(arr, new TreeNode(arr[0].Value), 0);
+            return Tree(nums, new TreeNode(nums[0].Value), 0);
         }
 
-        public static TreeNode Tree(int?[] arr, TreeNode root, int i)
+        public static TreeNode Tree(int?[] nums, TreeNode root, int i)
         {
-            // Base case for recursion 
-            if (i < arr.Length && arr[i].HasValue)
+            if (i < nums.Length && nums[i].HasValue)
             {
-                TreeNode temp = new TreeNode(arr[i].Value);
+                TreeNode temp = new TreeNode(nums[i].Value);
                 root = temp;
-                root.left = Tree(arr, root.left, 2 * i + 1);
-                root.right = Tree(arr, root.right, 2 * i + 2);
+                root.left = Tree(nums, root.left, 2 * i + 1);
+                root.right = Tree(nums, root.right, 2 * i + 2);
             }
             return root;
+        }
+
+        public static ListNode List(int[] nums)
+        {
+            return Node(nums, new ListNode(nums[0]), 0);
+        }
+
+        public static ListNode Node(int[] nums, ListNode root, int i)
+        {
+            if (i < nums.Length)
+            {
+                ListNode temp = new ListNode(nums[i]);
+                root = temp;
+                root.next = Node(nums, root.next, i + 1);
+            }
+            return root;
+        }
+
+        public static int[][] IntIntArray(int[,] array)
+        {
+            int rows = array.GetLength(0);
+            int[][] intArray = new int[rows][];
+            for (int i = 0; i < rows; i++)
+            {
+                intArray[i] = new int[array.Rank + 1];
+                for (int j = 0; j <= array.Rank; j++)
+                {
+                    intArray[i][j] = array[i, j];
+                }
+            }
+
+            return intArray;
         }
     }
 }

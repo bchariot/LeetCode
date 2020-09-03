@@ -1,7 +1,6 @@
 ﻿using LeetCode.Utils;
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace LeetCode.Algorithms
 {
@@ -11,20 +10,8 @@ namespace LeetCode.Algorithms
         public static void RunCode()
         {
             TreeNode root = Populate.Tree(new int?[] { 1, 2, 3, null, 5, null, 4});
-            Console.WriteLine($"    BinaryTreeRightSideView: {Print(GetRightSideView(root))}");
-            Console.WriteLine($"    BinaryTreeLeftSideView: {Print(GetLeftSideView(root))}");
-        }
-
-        static string Print(List<int> list)
-        {
-            StringBuilder sb = new StringBuilder();
-            sb.Append("[");
-            foreach (int num in  list)
-            {
-                sb.Append(num + ", ");
-            }
-            sb.Append("]");
-            return sb.ToString().Replace(", ]", "]");
+            Console.WriteLine($"    BinaryTreeRightSideView: {Print.ListInt(GetRightSideView(root))}");
+            Console.WriteLine($"    BinaryTreeLeftSideView: {Print.ListInt(GetLeftSideView(root))}");
         }
 
         static List<int> GetRightSideView(TreeNode root)
