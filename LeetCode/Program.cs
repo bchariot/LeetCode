@@ -34,6 +34,7 @@ namespace LeetCode
         static void RunHastSets()
         {
             ContainsDuplicate.RunCode();
+            FindAllNumbersDisappearedInArray.RunCode();
             MissingNumber.RunCode();
             MostCommonWord.RunCode();
             RemoveVowels.RunCode();
