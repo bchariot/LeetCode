@@ -27,11 +27,13 @@ namespace LeetCode
             CoinChange.RunCode();
             HouseRobber.RunCode();
             MinimumPathSum.RunCode();
+            NumberOfIslands.RunCode();
             UniquePaths.RunCode();
         }
 
         static void RunHastSets()
         {
+            ContainsDuplicate.RunCode();
             MissingNumber.RunCode();
             MostCommonWord.RunCode();
             RemoveVowels.RunCode();
@@ -47,6 +49,7 @@ namespace LeetCode
 
         static void RunMisc()
         {
+            FizzBuzz.RunCode();
             GroupedAnagrams.RunCode();
             MinimumDominoRotations.RunCode();
             PowerOfTwo.RunCode();
@@ -54,11 +57,14 @@ namespace LeetCode
             RemoveElement.RunCode();
             RobotReturnToOrigin.RunCode();
             SortArrayByParity.RunCode();
+            TwoSum.RunCode();
+            ValidAnagram.RunCode();
             WordSearch.RunCode();
         }
 
         static void RunQueues()
         {
+            BestTimeToBuyStock.RunCode();
             KClosestPoints.RunCode();
             LastStoneWeight.RunCode();
             MinimumCostConnectSticks.RunCode();
@@ -78,6 +84,7 @@ namespace LeetCode
         {
             AsteroidCollision.RunCode();
             FrogJump.RunCode();
+            ValidParentheses.RunCode();
         }
 
         static void RunStrings()
@@ -86,6 +93,7 @@ namespace LeetCode
             JewelsStones.RunCode();
             LongestCommonPrefix.RunCode();
             PartitionLabels.RunCode();
+            ReverseString.RunCode();
             StringCompression.RunCode();
         }
 

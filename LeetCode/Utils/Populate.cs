@@ -39,14 +39,32 @@ namespace LeetCode.Utils
             return root;
         }
 
+        public static char[][] CharCharArray(char[,] array)
+        {
+            int rows = array.GetLength(0);
+            int columns = array.Length / array.GetLength(0);
+            char[][] charArray = new char[rows][];
+            for (int i = 0; i < rows; i++)
+            {
+                charArray[i] = new char[columns];
+                for (int j = 0; j < columns; j++)
+                {
+                    charArray[i][j] = array[i, j];
+                }
+            }
+
+            return charArray;
+        }
+
         public static int[][] IntIntArray(int[,] array)
         {
             int rows = array.GetLength(0);
+            int columns = array.Length / array.GetLength(0);
             int[][] intArray = new int[rows][];
             for (int i = 0; i < rows; i++)
             {
-                intArray[i] = new int[array.Rank + 1];
-                for (int j = 0; j <= array.Rank; j++)
+                intArray[i] = new int[columns];
+                for (int j = 0; j < columns; j++)
                 {
                     intArray[i][j] = array[i, j];
                 }
