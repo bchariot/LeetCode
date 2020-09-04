@@ -8,7 +8,7 @@ namespace LeetCode
         static void Main(string[] args)
         {
             Console.WriteLine("Program started");
-            RunDynamicProgramming();
+            /*RunDynamicProgramming();
             RunHastSets();
             RunListNodes();
             RunMisc();
@@ -16,7 +16,7 @@ namespace LeetCode
             RunRecursion();
             RunStacks();
             RunStrings();
-            RunTreeNodes();
+            RunTreeNodes();*/
             Console.WriteLine("Program completed");
             Console.Read();
         }
@@ -52,13 +52,17 @@ namespace LeetCode
             FizzBuzz.RunCode();
             GroupedAnagrams.RunCode();
             MinimumDominoRotations.RunCode();
+            MoveZeroes.RunCode();
+            PlusOne.RunCode();
             PowerOfTwo.RunCode();
             QuickSelect.RunCode();
             RemoveElement.RunCode();
+            ReverseInteger.RunCode();
             RobotReturnToOrigin.RunCode();
             SortArrayByParity.RunCode();
             TwoSum.RunCode();
             ValidAnagram.RunCode();
+            ValidPalindrome.RunCode();
             WordSearch.RunCode();
         }
 
@@ -66,6 +70,7 @@ namespace LeetCode
         {
             BestTimeToBuyStock.RunCode();
             KClosestPoints.RunCode();
+            KLargestElementInArray.RunCode();
             LastStoneWeight.RunCode();
             MinimumCostConnectSticks.RunCode();
             ReorganizeString.RunCode();
@@ -83,6 +88,7 @@ namespace LeetCode
         static void RunStacks()
         {
             AsteroidCollision.RunCode();
+            BackspaceStringCompare.RunCode();
             FrogJump.RunCode();
             ValidParentheses.RunCode();
         }
