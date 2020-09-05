@@ -8,13 +8,13 @@ namespace LeetCode.Algorithms
         public static void RunCode()
         {
             int x = 123;
-            Console.WriteLine($"  ReverseInteger {x}: {Reverse(x)}");
+            Console.WriteLine($"    ReverseInteger {x}: {Reverse(x)}");
             x = -123;
-            Console.WriteLine($"  ReverseInteger {x}: {Reverse(x)}");
+            Console.WriteLine($"    ReverseInteger {x}: {Reverse(x)}");
             x = 120;
-            Console.WriteLine($"  ReverseInteger {x}: {Reverse(x)}");
+            Console.WriteLine($"    ReverseInteger {x}: {Reverse(x)}");
             x = 1534236469;
-            Console.WriteLine($"  ReverseInteger {x}: {Reverse(x)}");
+            Console.WriteLine($"    ReverseInteger {x}: {Reverse(x)}");
         }
 
         static int Reverse(int x)

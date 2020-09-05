@@ -11,7 +11,7 @@ namespace LeetCode.Algorithms
         public static void RunCode()
         {
             List<int> nums = (new int[] { 1, 2, 3 }).ToList<int>();
-            Console.WriteLine($"    SubSets [1, 2, 3]: {Print.ListListInt(GetSubSets(nums))}");
+            Console.WriteLine($"    SubSets {Print.ListInt(nums)}: {Print.ListListInt(GetSubSets(nums))}");
         }
 
         static List<List<int>> GetSubSets(List<int> nums)

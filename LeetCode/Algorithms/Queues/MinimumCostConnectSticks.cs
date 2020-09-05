@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LeetCode.Utils;
+using System;
 using Utils;
 
 namespace LeetCode.Algorithms
@@ -9,9 +10,9 @@ namespace LeetCode.Algorithms
         public static void RunCode()
         {
             int[] sticks = new int[] { 2, 4, 3 };
-            Console.WriteLine($"    MinimumCostConnectSticks [2,4,3]: {GetMinimum(sticks)}");
+            Console.WriteLine($"    MinimumCostConnectSticks {Print.IntArray(sticks)}: {GetMinimum(sticks)}");
             sticks = new int[] { 1, 8, 3, 5 };
-            Console.WriteLine($"    MinimumCostConnectSticks [1,8,3,5]: {GetMinimum(sticks)}");
+            Console.WriteLine($"    MinimumCostConnectSticks {Print.IntArray(sticks)}: {GetMinimum(sticks)}");
         }
 
         static int GetMinimum(int[] sticks)

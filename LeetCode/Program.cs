@@ -8,7 +8,7 @@ namespace LeetCode
         static void Main(string[] args)
         {
             Console.WriteLine("Program started");
-            /*RunDynamicProgramming();
+            RunDynamicProgramming();
             RunHastSets();
             RunListNodes();
             RunMisc();
@@ -16,9 +16,14 @@ namespace LeetCode
             RunRecursion();
             RunStacks();
             RunStrings();
-            RunTreeNodes();*/
+            RunTreeNodes();
             Console.WriteLine("Program completed");
             Console.Read();
+        }
+
+        static void RunDFS()
+        {
+            NumberOfIslands.RunCode();
         }
 
         static void RunDynamicProgramming()
@@ -27,14 +32,21 @@ namespace LeetCode
             CoinChange.RunCode();
             HouseRobber.RunCode();
             MinimumPathSum.RunCode();
-            NumberOfIslands.RunCode();
             UniquePaths.RunCode();
+        }
+
+        static void RunHastMaps()
+        {
+            FirstUniqueCharacter.RunCode();
+            GroupedAnagrams.RunCode();
+            StringCompression.RunCode();
         }
 
         static void RunHastSets()
         {
             ContainsDuplicate.RunCode();
             FindAllNumbersDisappearedInArray.RunCode();
+            JewelsStones.RunCode();
             MissingNumber.RunCode();
             MostCommonWord.RunCode();
             RemoveVowels.RunCode();
@@ -45,13 +57,13 @@ namespace LeetCode
         static void RunListNodes()
         {
             IntersectionTwoLinkedLists.RunCode();
+            MergeKSortedLists.RunCode();
             ReverseLinkedList.RunCode();
         }
 
         static void RunMisc()
         {
             FizzBuzz.RunCode();
-            GroupedAnagrams.RunCode();
             MinimumDominoRotations.RunCode();
             MoveZeroes.RunCode();
             PlusOne.RunCode();
@@ -96,12 +108,9 @@ namespace LeetCode
 
         static void RunStrings()
         {
-            FirstUniqueCharacter.RunCode();
-            JewelsStones.RunCode();
             LongestCommonPrefix.RunCode();
             PartitionLabels.RunCode();
             ReverseString.RunCode();
-            StringCompression.RunCode();
         }
 
         static void RunTreeNodes()

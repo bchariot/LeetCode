@@ -8,9 +8,15 @@ namespace LeetCode.Algorithms
         // LeetCode #200. Number of Islands
         public static void RunCode()
         {
-            char[][] grid = Populate.CharCharArray(new char[,] { { '1', '1', '1', '1', '0' }, { '1', '1', '0', '1', '0' }, { '1', '1', '0', '0', '0' }, { '0', '0', '0', '0', '0' } });
+            char[][] grid = Populate.CharCharArray(new char[,] { { '1', '1', '1', '1', '0' },
+                { '1', '1', '0', '1', '0' },
+                { '1', '1', '0', '0', '0' },
+                { '0', '0', '0', '0', '0' } });
             Console.WriteLine($"    NumberOfIslands: {GetNumberOfIslands(grid)}");
-            grid = Populate.CharCharArray(new char[,] { { '1', '1', '0', '0', '0' }, { '1', '1', '0', '0', '0' }, { '0', '0', '1', '0', '0' }, { '0', '0', '0', '1', '1' } });
+            grid = Populate.CharCharArray(new char[,] { { '1', '1', '0', '0', '0' },
+                { '1', '1', '0', '0', '0' },
+                { '0', '0', '1', '0', '0' },
+                { '0', '0', '0', '1', '1' } });
             Console.WriteLine($"    NumberOfIslands: {GetNumberOfIslands(grid)}");
         }
 

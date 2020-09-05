@@ -6,7 +6,7 @@ namespace LeetCode.Algorithms
 {
     public class MergeKSortedLists
     {
-        // LeetCode #. Template
+        // LeetCode #23. Merge K Sorted Lists
         public static void RunCode()
         {
             ListNode a = Populate.Node(new int[] { 1, 4, 5 });

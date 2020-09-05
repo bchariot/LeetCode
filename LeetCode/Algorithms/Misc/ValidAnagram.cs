@@ -20,22 +20,18 @@ namespace LeetCode.Algorithms
 
         static bool IsAnagram1(string s, string t)
         {
-            if (s.Length != t.Length)
-            {
+            if (s.Length != t.Length) {
                 return false;
             }
 
             int[] counts = new int[26];
-            for (int i = 0; i < s.Length; i++)
-            {
+            for (int i = 0; i < s.Length; i++) {
                 counts[s.ToCharArray()[i] - 'a']++;
                 counts[t.ToCharArray()[i] - 'a']--;
             }
 
-            foreach (int count in counts)
-            {
-                if (count != 0)
-                {
+            foreach (int count in counts) {
+                if (count != 0) {
                     return false;
                 }
             }
@@ -46,32 +42,21 @@ namespace LeetCode.Algorithms
         static bool IsAnagram2(string s, string t)
         {
             Dictionary<char, int> map = new Dictionary<char, int>();
-            foreach (char c in s.ToCharArray())
-            {
-                if (map.ContainsKey(c))
-                {
+            foreach (char c in s.ToCharArray()) {
+                if (map.ContainsKey(c)) {
                     map[c] += 1;
-                }
-                else
-                {
+                } else {
                     map.Add(c, 1);
                 }
             }
 
-            foreach (char c in t)
-            {
-                if (!map.ContainsKey(c))
-                {
+            foreach (char c in t) {
+                if (!map.ContainsKey(c)) {
                     return false;
-                }
-                else
-                {
-                    if (map[c] == 1)
-                    {
+                } else {
+                    if (map[c] == 1) {
                         map.Remove(c);
-                    }
-                    else
-                    {
+                    } else {
                         map[c] -= 1;
                     }
                 }

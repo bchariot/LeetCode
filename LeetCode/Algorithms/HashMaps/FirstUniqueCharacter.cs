@@ -5,7 +5,7 @@ namespace LeetCode.Algorithms
 {
     public class FirstUniqueCharacter
     {
-        // LeetCode #387. First Unique Character
+        // LeetCode #387. First Unique Character in a String
         public static void RunCode()
         {
             string s = "leetcode";
@@ -22,7 +22,7 @@ namespace LeetCode.Algorithms
             {
                 if (map.ContainsKey(chars[i]))
                 {
-                    int count = map[chars[i]];
+                    // Java: map.put(chars[i]);
                     map.Remove(chars[i]);
                     map.Add(chars[i], -1);
                 }

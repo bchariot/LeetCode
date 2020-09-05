@@ -14,14 +14,7 @@ namespace LeetCode.Algorithms
                 And all the clouds that lour'd upon our house
                 In the deep bosom of the ocean buried.
                 Now are our brows bound with victorious wreaths;
-                Our bruised arms hung up for monuments;
-                Our stern alarums changed to merry meetings,
-                Our dreadful marches to delightful measures.
-                Grim-visaged war hath smooth'd his wrinkled front;
-                And now, instead of mounting barbed steeds
-                To fright the souls of fearful adversaries,
-                He capers nimbly in a lady's chamber
-                To the lascivious pleasing of a lute.";
+                Our bruised arms hung up for monuments;";
             string[] banned = new string[] { "this", "that", "these", "those", "the", "a" };
             Console.WriteLine($"    MostCommonWord: {GetMostCommonWord(paragraph, banned)}");
         }
@@ -39,9 +32,9 @@ namespace LeetCode.Algorithms
             {
                 if (!bannedWords.Contains(word))
                 {
+                    //Java: count.put(word, counts.getOrDefault(word, 0) + 1);
                     if (counts.ContainsKey(word))
                     {
-                        //Java: count.put(word, counts.getOrDefault(word, 0) + 1);
                         counts[word] = counts[word] + 1;
                     }
                     else

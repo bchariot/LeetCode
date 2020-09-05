@@ -1,6 +1,5 @@
 ﻿using LeetCode.Utils;
 using System;
-using System.Collections.Generic;
 
 namespace LeetCode.Algorithms
 {

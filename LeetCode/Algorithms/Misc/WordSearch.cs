@@ -55,6 +55,5 @@ namespace LeetCode.Algorithms
 
             return found;
         }
-
     }
 }

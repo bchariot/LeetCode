@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LeetCode.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Utils;
@@ -11,8 +12,8 @@ namespace LeetCode.Algorithms
         public static void RunCode()
         {
             int[] stones = new int[] { 2, 7, 4, 1, 8, 1 };
-            Console.WriteLine($"    LastStoneWeight List for [2,7,4,1,8,1]: {GetLastStoneWeight1(stones)}");
-            Console.WriteLine($"    LastStoneWeight Queue for [2,7,4,1,8,1]: {GetLastStoneWeight2(stones)}");
+            Console.WriteLine($"    LastStoneWeight List for {Print.IntArray(stones)}: {GetLastStoneWeight1(stones)}");
+            Console.WriteLine($"    LastStoneWeight Queue for {Print.IntArray(stones)}: {GetLastStoneWeight2(stones)}");
         }
 
         static int GetLastStoneWeight1(int[] stones)

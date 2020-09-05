@@ -1,6 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using LeetCode.Utils;
+using System;
 
 namespace LeetCode.Algorithms
 {
@@ -11,10 +10,10 @@ namespace LeetCode.Algorithms
         {
             int[] a = new int[] { 2, 1, 2, 4, 2, 2 };
             int[] b = new int[] { 5, 2, 6, 2, 3, 2 };
-            Console.WriteLine($"    MinimumDominoRotations [2,1,2,4,2,2] [5,2,6,2,3,2]: {GetMinimim(a, b)}");
+            Console.WriteLine($"    MinimumDominoRotations {Print.IntArray(a)} {Print.IntArray(b)}: {GetMinimim(a, b)}");
             a = new int[] { 3, 5, 1, 2, 3 };
             b = new int[] { 3, 6, 3, 3, 4 };
-            Console.WriteLine($"    MinimumDominoRotations [3,5,1,2,3] [3,6,3,3,4]: {GetMinimim(a, b)}");
+            Console.WriteLine($"    MinimumDominoRotations {Print.IntArray(a)} {Print.IntArray(b)}: {GetMinimim(a, b)}");
         }
 
         static int GetMinimim(int[] a, int[] b)

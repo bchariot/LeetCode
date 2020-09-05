@@ -6,7 +6,7 @@ namespace LeetCode.Algorithms
 {
     public class RangeSumOfBST
     {
-        // LeetCode #. Test
+        // LeetCode #938. Range Sum of BST
         public static void RunCode()
         {
             TreeNode root = Populate.Tree(new int?[] { 10, 5, 15, 3, 7, null, 18 });

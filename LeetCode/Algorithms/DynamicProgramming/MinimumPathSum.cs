@@ -19,10 +19,13 @@ namespace LeetCode.Algorithms
                 return 0;
             }
 
-            int[][] dp = new int[grid.Length][];
-            for (int i = 0; i < grid.Length; i++)
+            int rows = grid.Length;
+            int columns = grid[0].Length;
+            int[][] dp = new int[rows][];
+            for (int i = 0; i < rows; i++)
             {
-                for (int j = 0; j < grid[0].Length; j++)
+                dp[i] = new int[columns];
+                for (int j = 0; j < columns; j++)
                 {
                     dp[i][j] = grid[i][j];
                     if (i > 0 && j > 0)
@@ -40,7 +43,7 @@ namespace LeetCode.Algorithms
                 }
             }
 
-            return dp[grid.Length - 1][grid[0].Length - 1];
+            return dp[rows - 1][columns - 1];
         }
     }
 }

@@ -8,12 +8,12 @@ namespace LeetCode.Algorithms
         public static void RunCode()
         {
             int n = 21564367;
-            Console.WriteLine($"    PowerOfTwo {n} Loop: {IsPowerOfTwoLoop(n)} BitCompare: {IsPowerOfTwoBitCompare(n)}");
+            Console.WriteLine($"    PowerOfTwo {n} Loop: {IsPower1(n)} BitCompare: {IsPower2(n)}");
             n = 33554432;
-            Console.WriteLine($"    PowerOfTwo {n} Loop: {IsPowerOfTwoLoop(n)} BitCompare: {IsPowerOfTwoBitCompare(n)}");
+            Console.WriteLine($"    PowerOfTwo {n} Loop: {IsPower1(n)} BitCompare: {IsPower2(n)}");
         }
 
-        static bool IsPowerOfTwoLoop(int n)
+        static bool IsPower1(int n)
         {
             int i = 1;
             while (i < n)
@@ -23,7 +23,7 @@ namespace LeetCode.Algorithms
             return i == n;
         }
 
-        static bool IsPowerOfTwoBitCompare(int n)
+        static bool IsPower2(int n)
         {
             return (n & (n - 1)) == 0;
         }

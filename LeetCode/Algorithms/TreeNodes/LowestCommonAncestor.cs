@@ -9,7 +9,6 @@ namespace LeetCode.Algorithms
         public static void RunCode()
         {
             TreeNode root = Populate.Tree(new int?[] { 6, 2, 8, 0, 4, 7, 9, null, null, 3, 5 });
-
             Console.WriteLine(Print(root, new TreeNode(3), new TreeNode(4)));
             Console.WriteLine(Print(root, new TreeNode(8), new TreeNode(9)));
             Console.WriteLine(Print(root, new TreeNode(5), new TreeNode(8)));

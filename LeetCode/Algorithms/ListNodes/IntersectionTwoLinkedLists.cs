@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LeetCode.Utils;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Xml.Serialization;
@@ -10,18 +11,11 @@ namespace LeetCode.Algorithms
         // LeetCode #160. Intersection of Two Linked Lists
         public static void RunCode()
         {
-            ListNode headA = new ListNode(4);
-            headA.next = new ListNode(1);
-            headA.next.next = new ListNode(8);
-            headA.next.next.next = new ListNode(4);
-            headA.next.next.next.next = new ListNode(5);
-            ListNode headB = new ListNode(5);
-            headB.next = new ListNode(0);
-            headB.next.next = new ListNode(1);
-            headB.next.next.next = new ListNode(8);
-            headB.next.next.next.next = new ListNode(4);
-            headB.next.next.next.next.next = new ListNode(5);
-            Console.WriteLine($"    IntersectionTwoLinkedLists [4,1,8,4,5] and [5,0,1,8,4,5]: {GetIntersectionNode(headA, headB).val}");
+            int[] a = new int[] { 4, 1, 8, 4, 5 };
+            int[] b = new int[] { 5, 0, 1, 8, 4, 5 };
+            ListNode headA = Populate.Node(a);
+            ListNode headB = Populate.Node(b);
+            Console.WriteLine($"    IntersectionTwoLinkedLists {Print.IntArray(a)} and {Print.IntArray(b)}: {GetIntersectionNode(headA, headB).val}");
         }
 
         static bool AreEqual(ListNode headA, ListNode headB)
@@ -55,7 +49,6 @@ namespace LeetCode.Algorithms
                         return headB;
                     }
                 }
-
                 headB = headB.next;
             }
 

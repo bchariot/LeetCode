@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LeetCode.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -10,7 +11,7 @@ namespace LeetCode.Algorithms
         public static void RunCode()
         {
             int[] nums = new int[] { 2, 1, 1, 2, 6 };
-            Console.WriteLine($"    SingleNumber from [2, 1, 1, 2, 6]: {GetSingleNumber(nums)}");
+            Console.WriteLine($"    SingleNumber from {Print.IntArray(nums)}: {GetSingleNumber(nums)}");
         }
 
         static int GetSingleNumber(int[] nums)

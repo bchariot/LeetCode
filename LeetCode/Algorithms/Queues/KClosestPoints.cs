@@ -20,24 +20,20 @@ namespace LeetCode.Algorithms
         static int[][] GetKClosestPoints1(int[][] points, int k)
         {
             PriorityQueue<ListInt> maxHeap = new PriorityQueue<ListInt>();
-            foreach (int[] p in points)
-            {
-                if (p == null)
-                {
+            foreach (int[] p in points) {
+                if (p == null) {
                     continue;
                 }
 
                 ListInt point = new ListInt(p);
                 maxHeap.Add(point);
-                if (maxHeap.Size() > k)
-                {
+                if (maxHeap.Size() > k) {
                     maxHeap.Remove();
                 }
             }
 
             int[][] result = new int[k][];
-            while (k-- > 0)
-            {
+            while (k-- > 0) {
                 ListInt intListType = maxHeap.Remove();
                 result[k] = intListType.MyList;
             }
@@ -50,27 +46,22 @@ namespace LeetCode.Algorithms
             int[][] result = new int[k][];
             SortedDictionary<int, int[]> sd = new SortedDictionary<int, int[]>();
 
-            foreach (int[] p in points)
-            {
-                if (p == null)
-                {
+            foreach (int[] p in points) {
+                if (p == null) {
                     continue;
                 }
 
                 int key = p[0] * p[0] + p[1] * p[1];
-                if (!sd.ContainsKey(key))
-                {
+                if (!sd.ContainsKey(key)) {
                     sd.Add(key, p);
                 }
-                if (sd.Count > k)
-                {
+                if (sd.Count > k) {
                     sd.Remove(sd.Keys.Last());
                 }
             }
 
             int i = 0;
-            foreach (int[] value in sd.Values)
-            {
+            foreach (int[] value in sd.Values) {
                 result[i] = value;
                 i++;
             }

@@ -22,7 +22,7 @@ namespace LeetCode.Algorithms
              * for (char c: s.toCharArray()) {
              *     map.put(c, map.getOrDefault(c, 0) + 1);
              * }
-             * PriorityQueue<Character> queue = new PriorityQueue<>((a, b) -> map.get(b) - map.get(a));
+             * PriorityQueue<Character> maxHeap = new PriorityQueue<>((a, b) -> map.get(b) - map.get(a));
              * queue.add(map.keySet());
              */
             Dictionary<char, int> sd = new Dictionary<char, int>();

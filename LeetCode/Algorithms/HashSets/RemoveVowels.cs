@@ -7,15 +7,20 @@ namespace LeetCode.Algorithms
 {
     public class RemoveVowels
     {
-        // LeetCode #. Test
+        // LeetCode #119. Remove Vowels from a String
         public static void RunCode()
         {
             string s = "leetcodeisacommunityforcoders";
-            Console.WriteLine($"    RemoveVowels brute from {s}: {GetRemoveVowels(s)}");
-            Console.WriteLine($"    RemoveVowels regex from {s}: {Regex.Replace(s, "[aeiou]", "")}");
+            Console.WriteLine($"    RemoveVowels brute from {s}: {GetRemoveVowels1(s)}");
+            Console.WriteLine($"    RemoveVowels regex from {s}: {GetRemoveVowels2(s)}");
         }
 
-        static string GetRemoveVowels(string s)
+        static string GetRemoveVowels1(string s)
+        {
+            return Regex.Replace(s, "[aeiou]", "");
+        }
+
+        static string GetRemoveVowels2(string s)
         {
             HashSet<char> set = new HashSet<char>();
             set.Add('a');
