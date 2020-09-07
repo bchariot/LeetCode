@@ -17,6 +17,18 @@ namespace LeetCode.Utils
             return sb.ToString().Replace(",]", "]");
         }
 
+        public static string IntArrayNull(int?[] nums)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append("[");
+            foreach (int? num in nums)
+            {
+                sb.Append((num.HasValue ? num.Value + "" : "null") + ",");
+            }
+            sb.Append("]");
+            return sb.ToString().Replace(",]", "]");
+        }
+
         public static string IntIntArray(int[][] nums)
         {
             StringBuilder sbi = new StringBuilder();
@@ -46,6 +58,11 @@ namespace LeetCode.Utils
                 head = head.next;
             }
             return sb.ToString();
+        }
+
+        public static string RandomNode(RandomNode head)
+        {
+            return "";
         }
 
         public static string ListInt(List<int> list)

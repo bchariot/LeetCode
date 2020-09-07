@@ -17,6 +17,7 @@ namespace LeetCode.Algorithms
 
         static int GetCoinChange(int[] coins, int amount)
         {
+            // Time Complexity: Quadratic O(m*n) Space: Linear O(n)
             int[] dp = new int[amount + 1];
             dp[0] = 0;
             for (int i = 1; i <= amount; i++)

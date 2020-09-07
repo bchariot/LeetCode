@@ -16,6 +16,7 @@ namespace LeetCode.Algorithms
 
         static List<List<int>> GetSubSets(List<int> nums)
         {
+            // Time Complexity: Exponential O(2^n) Space: Linear O(n)
             List<List<int>> results = new List<List<int>>();
             RecursiveCall(nums, 0, new List<int>(), results);
             return results;

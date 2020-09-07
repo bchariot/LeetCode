@@ -72,5 +72,41 @@ namespace LeetCode.Utils
 
             return intArray;
         }
+
+        public static RandomNode RdmNode(int?[,] array)
+        {
+            RandomNode root = GetNextNode(array, new RandomNode(array[0, 0].Value), 0);
+            Dictionary<int, RandomNode> map = new Dictionary<int, RandomNode>();
+            RandomNode node = root;
+            while (node != null)
+            {
+                map.Add(node.val, node);
+                node = node.next;
+            }
+            return GetRandomNode(root, array, map, 0);
+        }
+
+        static RandomNode GetNextNode(int?[,] array, RandomNode root, int i)
+        {
+            if (i < array.Length / 2)
+            {
+                RandomNode temp = new RandomNode(array[i, 0].Value);
+                root = temp;
+                root.next = GetNextNode(array, root.next, i + 1);
+            }
+            return root;
+        }
+
+        static RandomNode GetRandomNode(RandomNode root, int?[,] array, Dictionary<int, RandomNode> map, int i)
+        {
+            if (i < array.Length / 2)
+            {
+                RandomNode node = array[i, 1].HasValue && array[array[i, 1].Value, 0].HasValue && map.ContainsKey(array[array[i, 1].Value, 0].Value) ? map[array[array[i, 1].Value, 0].Value] : null;
+                root.random = node;
+                root.next = GetRandomNode(root.next, array, map, i + 1);
+            }
+
+            return root;
+        }
     }
 }

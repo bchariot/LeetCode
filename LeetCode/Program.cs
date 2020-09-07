@@ -8,15 +8,17 @@ namespace LeetCode
         static void Main(string[] args)
         {
             Console.WriteLine("Program started");
+            /*RunDFS();
             RunDynamicProgramming();
-            RunHastSets();
+            RunHashMaps();
+            RunHashSets();
             RunListNodes();
             RunMisc();
             RunQueues();
             RunRecursion();
             RunStacks();
             RunStrings();
-            RunTreeNodes();
+            RunTreeNodes();*/
             Console.WriteLine("Program completed");
             Console.Read();
         }
@@ -33,16 +35,19 @@ namespace LeetCode
             HouseRobber.RunCode();
             MinimumPathSum.RunCode();
             UniquePaths.RunCode();
+            WordBreak.RunCode();
         }
 
-        static void RunHastMaps()
+        static void RunHashMaps()
         {
+            CopyListWithRandomPointer.RunCode();
+            FindFirstAndLastPositionOfElementInSortedArray.RunCode();
             FirstUniqueCharacter.RunCode();
             GroupedAnagrams.RunCode();
             StringCompression.RunCode();
         }
 
-        static void RunHastSets()
+        static void RunHashSets()
         {
             ContainsDuplicate.RunCode();
             FindAllNumbersDisappearedInArray.RunCode();
@@ -72,6 +77,7 @@ namespace LeetCode
             RemoveElement.RunCode();
             ReverseInteger.RunCode();
             RobotReturnToOrigin.RunCode();
+            SearchRotatedSortedArray.RunCode();
             SortArrayByParity.RunCode();
             TwoSum.RunCode();
             ValidAnagram.RunCode();
@@ -82,6 +88,7 @@ namespace LeetCode
         static void RunQueues()
         {
             BestTimeToBuyStock.RunCode();
+            BinaryTreeLevelOrderTraversal.RunCode();
             KClosestPoints.RunCode();
             KLargestElementInArray.RunCode();
             LastStoneWeight.RunCode();
@@ -91,10 +98,13 @@ namespace LeetCode
 
         static void RunRecursion()
         {
+            CloneGraph.RunCode();
             CombinationSum.RunCode();
             FloodFill.RunCode();
+            GenerateParentheses.RunCode();
             LetterPhone.RunCode();
             MaxAreaOfIsland.RunCode();
+            PermutationSequence.RunCode();
             SubSets.RunCode();
         }
 
@@ -102,6 +112,7 @@ namespace LeetCode
         {
             AsteroidCollision.RunCode();
             BackspaceStringCompare.RunCode();
+            FlattenBinaryTreeToLinkedList.RunCode();
             FrogJump.RunCode();
             ValidParentheses.RunCode();
         }
@@ -111,6 +122,7 @@ namespace LeetCode
             LongestCommonPrefix.RunCode();
             PartitionLabels.RunCode();
             ReverseString.RunCode();
+            ReverseWordsInString.RunCode();
         }
 
         static void RunTreeNodes()
