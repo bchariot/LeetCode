@@ -13,8 +13,8 @@ namespace LeetCode.Algorithms
         {
             int[] a = new int[] { 4, 1, 8, 4, 5 };
             int[] b = new int[] { 5, 0, 1, 8, 4, 5 };
-            ListNode headA = Populate.Node(a);
-            ListNode headB = Populate.Node(b);
+            ListNode headA = Populate.ListNode(a);
+            ListNode headB = Populate.ListNode(b);
             Console.WriteLine($"    IntersectionTwoLinkedLists {Print.IntArray(a)} and {Print.IntArray(b)}: {GetIntersectionNode(headA, headB).val}");
         }
 

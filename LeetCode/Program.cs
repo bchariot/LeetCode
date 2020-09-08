@@ -77,6 +77,7 @@ namespace LeetCode
             RemoveElement.RunCode();
             ReverseInteger.RunCode();
             RobotReturnToOrigin.RunCode();
+            RotateImage.RunCode();
             SearchRotatedSortedArray.RunCode();
             SortArrayByParity.RunCode();
             TwoSum.RunCode();
@@ -100,6 +101,7 @@ namespace LeetCode
         {
             CloneGraph.RunCode();
             CombinationSum.RunCode();
+            FlattenBSTToDLL.RunCode();
             FloodFill.RunCode();
             GenerateParentheses.RunCode();
             LetterPhone.RunCode();
@@ -127,6 +129,7 @@ namespace LeetCode
 
         static void RunTreeNodes()
         {
+            BinaryTreeMaximumPathSum.RunCode();
             BinaryTreePath.RunCode();
             BinaryTreeRightSideView.RunCode();
             LowestCommonAncestor.RunCode();

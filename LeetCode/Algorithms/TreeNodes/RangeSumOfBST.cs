@@ -9,7 +9,7 @@ namespace LeetCode.Algorithms
         // LeetCode #938. Range Sum of BST
         public static void RunCode()
         {
-            TreeNode root = Populate.Tree(new int?[] { 10, 5, 15, 3, 7, null, 18 });
+            TreeNode root = Populate.TreeNode(new int?[] { 10, 5, 15, 3, 7, null, 18 });
             int l = 7;
             int r = 15;
             Console.WriteLine($"    RangeSumOfBST queue: {GetRangeSumOfBST1(root, l, r)}");

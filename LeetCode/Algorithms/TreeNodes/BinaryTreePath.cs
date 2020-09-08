@@ -9,7 +9,7 @@ namespace LeetCode.Algorithms
         // LeetCode #257. Binary Tree Paths
         public static void RunCode()
         {
-            TreeNode root = Populate.Tree(new int?[] { 1, 2, 3, null, 5 });
+            TreeNode root = Populate.TreeNode(new int?[] { 1, 2, 3, null, 5 });
             Console.WriteLine($"    BinaryTreePaths: {Print.ListString(GetBinaryTreePath(root))}");
         }
 

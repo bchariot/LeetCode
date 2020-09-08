@@ -10,7 +10,7 @@ namespace LeetCode.Algorithms
         public static void RunCode()
         {
             int?[] array = new int?[] { 3, 9, 20, null, null, 15, 7 };
-            TreeNode root = Populate.Tree(array);
+            TreeNode root = Populate.TreeNode(array);
             Console.WriteLine($"    BinaryTreeLevelOrderTraversal {Print.IntArrayNull(array)}: {Print.ListListInt(LevelOrder(root))}");
         }
 

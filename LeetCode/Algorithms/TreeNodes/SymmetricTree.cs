@@ -8,9 +8,9 @@ namespace LeetCode.Algorithms
         // LeetCode #101. Symmetric Tree
         public static void RunCode()
         {
-            TreeNode node = Populate.Tree(new int?[] { 1, 2, 2, 3, 4, 4, 3 });
+            TreeNode node = Populate.TreeNode(new int?[] { 1, 2, 2, 3, 4, 4, 3 });
             Console.WriteLine($"    SymmetricTree 1: {IsSymmetricTree(node)}");
-            node = Populate.Tree(new int?[] { 1, 2, 2, null, 3, null, 3 });
+            node = Populate.TreeNode(new int?[] { 1, 2, 2, null, 3, null, 3 });
             Console.WriteLine($"    SymmetricTree 2: {IsSymmetricTree(node)}");
         }
 

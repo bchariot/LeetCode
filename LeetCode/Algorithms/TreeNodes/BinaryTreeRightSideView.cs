@@ -8,7 +8,7 @@ namespace LeetCode.Algorithms
     {
         // LeetCode #199. Binary Tree Right Side View
         public static void RunCode() {
-            TreeNode root = Populate.Tree(new int?[] { 1, 2, 3, null, 5, null, 4});
+            TreeNode root = Populate.TreeNode(new int?[] { 1, 2, 3, null, 5, null, 4});
             Console.WriteLine($"    BinaryTreeRightSideView: {Print.ListInt(GetRightSideView(root))}");
             Console.WriteLine($"    BinaryTreeLeftSideView: {Print.ListInt(GetLeftSideView(root))}");
         }

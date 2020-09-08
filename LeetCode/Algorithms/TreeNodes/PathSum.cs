@@ -10,7 +10,7 @@ namespace LeetCode.Algorithms
         {
             // LeetCode #113. Path Sum II
             int sum = 22;
-            TreeNode root = Populate.Tree(new int?[] { 5, 4, 8, 11, null, 13, 4, 7, 2, null, null, 5, 1 });
+            TreeNode root = Populate.TreeNode(new int?[] { 5, 4, 8, 11, null, 13, 4, 7, 2, null, null, 5, 1 });
             List<List<int>> paths = GetPathSum(root, sum);
 
             foreach (List<int> path in paths)

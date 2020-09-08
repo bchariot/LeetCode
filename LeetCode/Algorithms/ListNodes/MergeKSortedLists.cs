@@ -9,9 +9,9 @@ namespace LeetCode.Algorithms
         // LeetCode #23. Merge K Sorted Lists
         public static void RunCode()
         {
-            ListNode a = Populate.Node(new int[] { 1, 4, 5 });
-            ListNode b = Populate.Node(new int[] { 1, 3, 4 });
-            ListNode c = Populate.Node(new int[] { 2, 6 });
+            ListNode a = Populate.ListNode(new int[] { 1, 4, 5 });
+            ListNode b = Populate.ListNode(new int[] { 1, 3, 4 });
+            ListNode c = Populate.ListNode(new int[] { 2, 6 });
             ListNode[] lists = new ListNode[] { a, b, c };
             Console.WriteLine($"    MergeKSortedLists {Print.ListNode(MergeKLists(lists))}");
         }

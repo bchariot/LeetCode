@@ -8,8 +8,8 @@ namespace LeetCode.Algorithms
         // LeetCode #572. Subtree of Another Tree
         public static void RunCode()
         {
-            TreeNode s = Populate.Tree(new int?[] { 3, 4, 5, 1, 2 });
-            TreeNode t = Populate.Tree(new int?[] { 4, 1, 2 });
+            TreeNode s = Populate.TreeNode(new int?[] { 3, 4, 5, 1, 2 });
+            TreeNode t = Populate.TreeNode(new int?[] { 4, 1, 2 });
             Console.WriteLine($"    SubtreeOfAnotherTree: {IsSubtree(s, t)}");
         }
 

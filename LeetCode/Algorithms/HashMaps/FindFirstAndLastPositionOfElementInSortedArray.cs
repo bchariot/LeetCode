@@ -39,7 +39,7 @@ namespace LeetCode.Algorithms
         }
 
         static int[] SearchRange2(int[] nums, int target) {
-            // Time Complexity: Linear O(n) Space: Linear O(1)
+            // Time Complexity: Linear O(n) Space: Constant O(1)
             int i = 0;
             int j = nums.Length - 1;
             int low = -1;

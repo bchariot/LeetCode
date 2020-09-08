@@ -10,7 +10,7 @@ namespace LeetCode.Algorithms
         // LeetCode #. Template
         public static void RunCode()
         {
-            TreeNode root = Populate.Tree(new int?[] { 1, 2, 5, 3, 4, null, 6 });
+            TreeNode root = Populate.TreeNode(new int?[] { 1, 2, 5, 3, 4, null, 6 });
             Console.WriteLine($"    FlattenBinaryTreeToLinkedList: {Print.IntArray(Flatten(root))}");
         }
 

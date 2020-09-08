@@ -6,35 +6,35 @@ namespace LeetCode.Utils
 {
     public class Populate
     {
-        public static TreeNode Tree(int?[] nums)
+        public static TreeNode TreeNode(int?[] nums)
         {
-            return Tree(nums, new TreeNode(nums[0].Value), 0);
+            return TreeNode(nums, new TreeNode(nums[0].Value), 0);
         }
 
-        static TreeNode Tree(int?[] nums, TreeNode root, int i)
+        static TreeNode TreeNode(int?[] nums, TreeNode root, int i)
         {
             if (i < nums.Length && nums[i].HasValue)
             {
                 TreeNode temp = new TreeNode(nums[i].Value);
                 root = temp;
-                root.left = Tree(nums, root.left, 2 * i + 1);
-                root.right = Tree(nums, root.right, 2 * i + 2);
+                root.left = TreeNode(nums, root.left, 2 * i + 1);
+                root.right = TreeNode(nums, root.right, 2 * i + 2);
             }
             return root;
         }
 
-        public static ListNode Node(int[] nums)
+        public static ListNode ListNode(int[] nums)
         {
-            return Node(nums, new ListNode(nums[0]), 0);
+            return ListNode(nums, new ListNode(nums[0]), 0);
         }
 
-        static ListNode Node(int[] nums, ListNode root, int i)
+        static ListNode ListNode(int[] nums, ListNode root, int i)
         {
             if (i < nums.Length)
             {
                 ListNode temp = new ListNode(nums[i]);
                 root = temp;
-                root.next = Node(nums, root.next, i + 1);
+                root.next = ListNode(nums, root.next, i + 1);
             }
             return root;
         }

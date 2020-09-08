@@ -8,9 +8,9 @@ namespace LeetCode.Algorithms
         // LeetCode #206. Reverse Linked List
         public static void RunCode()
         {
-            ListNode head = Populate.Node(new int[] { 1, 6, 7, 2, 4, 9 });
+            ListNode head = Populate.ListNode(new int[] { 1, 6, 7, 2, 4, 9 });
             Console.WriteLine($"    ReverseLinkedList Original: {Print.ListNode(head)} Reversed: {Print.ListNode(DoIterative(head))}");
-            head = Populate.Node(new int[] { 4, 2, 8, 1, 6, 3 });
+            head = Populate.ListNode(new int[] { 4, 2, 8, 1, 6, 3 });
             Console.WriteLine($"    ReverseLinkedList Original: {Print.ListNode(head)} Reversed: {Print.ListNode(DoIterative(head))}");
         }
 

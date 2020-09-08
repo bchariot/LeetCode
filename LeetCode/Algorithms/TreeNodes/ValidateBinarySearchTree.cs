@@ -9,10 +9,10 @@ namespace LeetCode.Algorithms
         // LeetCode #98. Validate Binary Search Tree
         public static void RunCode()
         {
-            TreeNode root = Populate.Tree(new int?[] { 2, 1, 3 });
+            TreeNode root = Populate.TreeNode(new int?[] { 2, 1, 3 });
             Console.WriteLine($"    ValidateBinarySearchTree: queue {IsValidBST1(root)}");
             Console.WriteLine($"    ValidateBinarySearchTree: recur {IsValidBST2(root)}");
-            root = Populate.Tree(new int?[] { 15, 7, 25, 2, 13, 20, 30, 14, 24 });
+            root = Populate.TreeNode(new int?[] { 15, 7, 25, 2, 13, 20, 30, 14, 24 });
             Console.WriteLine($"    ValidateBinarySearchTree: queue {IsValidBST1(root)}");
             Console.WriteLine($"    ValidateBinarySearchTree: recur {IsValidBST2(root)}");
         }
