@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LeetCode.Utils;
+using System;
 using System.Collections.Generic;
 
 namespace LeetCode.Algorithms
@@ -41,28 +42,24 @@ namespace LeetCode.Algorithms
 
         static bool IsAnagram2(string s, string t)
         {
-            Dictionary<char, int> map = new Dictionary<char, int>();
+            HashMap<char, int> map = new HashMap<char, int>();
             foreach (char c in s.ToCharArray()) {
-                if (map.ContainsKey(c)) {
-                    map[c] += 1;
-                } else {
-                    map.Add(c, 1);
-                }
+                map.Put(c, map.GetOrDefault(c, 0) + 1);
             }
 
             foreach (char c in t) {
                 if (!map.ContainsKey(c)) {
                     return false;
                 } else {
-                    if (map[c] == 1) {
+                    if (map.Get(c) == 1) {
                         map.Remove(c);
                     } else {
-                        map[c] -= 1;
+                        map.Put(c, map.GetOrDefault(c, 0) - 1);
                     }
                 }
             }
 
-            return map.Count == 0;
+            return map.Size() == 0;
         }
     }
 }

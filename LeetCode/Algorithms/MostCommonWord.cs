@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LeetCode.Utils;
+using System;
 using System.Collections.Generic;
 
 namespace LeetCode.Algorithms
@@ -27,27 +28,19 @@ namespace LeetCode.Algorithms
                 bannedWords.Add(word);
             }
 
-            Dictionary<string, int> counts = new Dictionary<string, int>();
+            HashMap<string, int> counts = new HashMap<string, int>();
             foreach (string word in paragraph.Replace("[^a-zA-Z]", "").Split(" "))
             {
                 if (!bannedWords.Contains(word))
                 {
-                    //Java: count.put(word, counts.getOrDefault(word, 0) + 1);
-                    if (counts.ContainsKey(word))
-                    {
-                        counts[word] = counts[word] + 1;
-                    }
-                    else
-                    {
-                        counts[word] = 1;
-                    }
+                    counts.Put(word, counts.GetOrDefault(word, 0) + 1);
                 }
             }
 
             string result = "";
-            foreach (string key in counts.Keys)
+            foreach (string key in counts.Keys())
             {
-                if (result.Equals("") || counts.GetValueOrDefault(key, 0) > counts.GetValueOrDefault(result, 0))
+                if (result.Equals("") || counts.GetOrDefault(key, 0) > counts.GetOrDefault(result, 0))
                 {
                     result = key;
                 }

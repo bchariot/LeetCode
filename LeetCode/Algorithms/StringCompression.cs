@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LeetCode.Utils;
+using System;
 using System.Collections.Generic;
 
 namespace LeetCode.Algorithms
@@ -46,31 +47,21 @@ namespace LeetCode.Algorithms
 
         static int GetStringCompression2(char[] chars)
         {
-            Dictionary<char, int> map = new Dictionary<char, int>();
+            HashMap<char, int> map = new HashMap<char, int>();
             foreach (char c in chars)
             {
-                if (map.ContainsKey(c))
-                {
-                    // Java: map.push(c, map.getOrDefault(c, 0) + 1);
-                    int count = map[c];
-                    map.Remove(c);
-                    map.Add(c, count + 1);
-                }
-                else
-                {
-                    map.Add(c, 1);
-                }
+                map.Put(c, map.GetOrDefault(c, 0) + 1);
             }
 
             List<char> list = new List<char>();
-            foreach (KeyValuePair<char, int> kvp in map)
+            foreach (char c in map.Keys())
             {
-                list.Add(kvp.Key);
-                if (kvp.Value != 1)
+                list.Add(c);
+                if (map.Get(c) != 1)
                 {
-                    foreach (char c in kvp.Value.ToString().ToCharArray())
+                    foreach (char ch in map.Get(c).ToString().ToCharArray())
                     {
-                        list.Add(c);
+                        list.Add(ch);
                     }
                 }
             }

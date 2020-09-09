@@ -19,20 +19,20 @@ namespace LeetCode.Algorithms
 
         static int[] SearchRange1(int[] nums, int target) {
             // Time Complexity: Linear O(n) Space: Linear O(n)
-            Dictionary<int, int[]> map = new Dictionary<int, int[]>();
+            HashMap<int, int[]> map = new HashMap<int, int[]>();
             for (int i = 0; i < nums.Length; i++) {
                 if (map.ContainsKey(nums[i])) {
-                    int[] pair = map[nums[i]];
+                    int[] pair = map.Get(nums[i]);
                     pair[1] = i;
                     map.Remove(nums[i]);
-                    map.Add(nums[i], pair);
+                    map.Put(nums[i], pair);
                 } else {
-                    map.Add(nums[i], new int[] { i, i });
+                    map.Put(nums[i], new int[] { i, i });
                 }
             }
 
             if (map.ContainsKey(target)) {
-                return map[target];
+                return map.Get(target);
             } else {
                 return new int[] { -1, -1 };
             }

@@ -1,5 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using LeetCode.Utils;
+using System;
 
 namespace LeetCode.Algorithms
 {
@@ -21,17 +21,17 @@ namespace LeetCode.Algorithms
                 return false;
             }
 
-            Dictionary<char, int> map = new Dictionary<char, int>();
-            map.Add('L', 0);
-            map.Add('R', 0);
-            map.Add('U', 0);
-            map.Add('D', 0);
+            HashMap<char, int> map = new HashMap<char, int>();
+            map.Put('L', 0);
+            map.Put('R', 0);
+            map.Put('U', 0);
+            map.Put('D', 0);
 
             foreach (char c in  moves.ToCharArray())
             {
-                map[c] = map[c] + 1;
+                map.Put(c, map.GetOrDefault(c, 0) + 1);
             }
-            return map['L'] == map['R'] && map['U'] == map['D'];
+            return map.Get('L') == map.Get('R') && map.Get('U') == map.Get('D');
         }
     }
 }

@@ -21,17 +21,17 @@ namespace LeetCode.Algorithms
 
         static int[] GetTwoSum1(int[] nums, int target)
         {
-            Dictionary<int, int> map = new Dictionary<int, int>();
+            HashMap<int, int> map = new HashMap<int, int>();
             for (int i = 0; i < nums.Length; i++)
             {
                 int diff = target - nums[i];
                 if (map.ContainsKey(diff))
                 {
-                    return new int[] { map[diff], i };
+                    return new int[] { map.Get(diff), i };
                 }
                 else
                 {
-                    map.Add(nums[i], i);
+                    map.Put(nums[i], i);
                 }
             }
             return new int[] { };

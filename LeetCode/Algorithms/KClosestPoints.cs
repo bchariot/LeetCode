@@ -14,7 +14,7 @@ namespace LeetCode.Algorithms
             int[][] points = Populate.IntIntArray(new int[,] { { 1, 3 }, { -2, 2 }, { 4, -1 }, { 3, 2 }, { 5, 3 }, { -1, 2 } });
             int k = 3;
             Console.WriteLine($"    KClosestPoints queue {k} of {Print.Points(points)}: {Print.Points(GetKClosestPoints1(points, k))}");
-            Console.WriteLine($"    KClosestPoints dictionary {k} of {Print.Points(points)}: {Print.Points(GetKClosestPoints2(points, k))}");
+            Console.WriteLine($"    KClosestPoints HashMap {k} of {Print.Points(points)}: {Print.Points(GetKClosestPoints2(points, k))}");
         }
 
         static int[][] GetKClosestPoints1(int[][] points, int k)

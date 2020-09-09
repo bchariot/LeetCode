@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LeetCode.Utils;
+using System;
 using System.Collections.Generic;
 
 namespace LeetCode.Algorithms
@@ -16,27 +17,18 @@ namespace LeetCode.Algorithms
 
         static int GetFirstUniqueCharacter(string s)
         {
-            Dictionary<char, int> map = new Dictionary<char, int>();
-            char[] chars = s.ToCharArray();
-            for (int i = 0; i < chars.Length; i++)
+            HashMap<char, int> map = new HashMap<char, int>();
+            for (int i = 0; i < s.Length; i++)
             {
-                if (map.ContainsKey(chars[i]))
-                {
-                    // Java: map.put(chars[i]);
-                    map.Remove(chars[i]);
-                    map.Add(chars[i], -1);
-                }
-                else
-                {
-                    map.Add(chars[i], i);
-                }
+                char c = s.CharAt(i);
+                map.Put(c, map.GetOrDefault(c, 3) - 2);
             }
 
-            foreach (KeyValuePair<char, int> kvp in map)
+            foreach (char c in map.Keys())
             {
-                if (kvp.Value != -1)
+                if (map.Get(c) == 1)
                 {
-                    return kvp.Value;
+                    return map.Get(c);
                 }
             }
 

@@ -16,19 +16,19 @@ namespace LeetCode.Algorithms
         static GraphNode Clone(GraphNode node)
         {
             // Time Complexity: Linear O(n) Space: Linear O(n)
-            Dictionary<int, GraphNode> map = new Dictionary<int, GraphNode>();
+            HashMap<int, GraphNode> map = new HashMap<int, GraphNode>();
             return RecursiveCall(node, map);
         }
 
-        static GraphNode RecursiveCall(GraphNode node, Dictionary<int, GraphNode> map)
+        static GraphNode RecursiveCall(GraphNode node, HashMap<int, GraphNode> map)
         {
             if (map.ContainsKey(node.val))
             {
-                return map[node.val];
+                return map.Get(node.val);
             }
 
             GraphNode copy = new GraphNode(node.val);
-            map.Add(node.val, copy);
+            map.Put(node.val, copy);
             foreach (GraphNode nd in node.neighbors)
             {
                 copy.neighbors.Add(RecursiveCall(nd, map));

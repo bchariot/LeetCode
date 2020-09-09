@@ -17,31 +17,20 @@ namespace LeetCode.Algorithms
 
         static string GetReorganizeString(string s)
         {
+            HashMap<char, int> sd = new HashMap<char, int>();
+            foreach (char c in s.ToCharArray())
+            {
+                sd.Put(c, sd.GetOrDefault(c, 0) + 1);
+            }
+
             /* Java:
-             * Hashmap<char, int> map = new Hashmap();
-             * for (char c: s.toCharArray()) {
-             *     map.put(c, map.getOrDefault(c, 0) + 1);
-             * }
              * PriorityQueue<Character> maxHeap = new PriorityQueue<>((a, b) -> map.get(b) - map.get(a));
              * queue.add(map.keySet());
              */
-            Dictionary<char, int> sd = new Dictionary<char, int>();
-            foreach (char ch in s.ToCharArray())
-            {
-                if (sd.ContainsKey(ch))
-                {
-                    sd[ch] = sd[ch] + 1;
-                }
-                else
-                {
-                    sd.Add(ch, 1);
-                }
-            }
-
             PriorityQueue<KeyMaxValue> queue = new PriorityQueue<KeyMaxValue>();
-            foreach (char key in sd.Keys)
+            foreach (char key in sd.Keys())
             {
-                queue.Add(new KeyMaxValue(key, sd[key]));
+                queue.Add(new KeyMaxValue(key, sd.Get(key)));
             }
 
             StringBuilder sb = new StringBuilder();

@@ -17,25 +17,19 @@ namespace LeetCode.Algorithms
         static List<List<string>> GetGroupedAnagrams(List<string> strs)
         {
             List<List<string>> result = new List<List<string>>();
-            // Java: HashMap<String, List<String>> map = new HashMap<>();
-            Dictionary<string, List<string>> map = new Dictionary<string, List<string>>();
+            HashMap<string, List<string>> map = new HashMap<string, List<string>>();
 
             foreach (string str in strs)
             {
                 char[] chars = str.ToCharArray();
                 Array.Sort(chars);
                 string key = new string(chars);
-
-                if (!map.ContainsKey(key))
-                {
-                    map.Add(key, new List<string>());
-                }
-
-                map.GetValueOrDefault(key).Add(str);
+                List<string> list = !map.ContainsKey(key) ? new List<string>() : map.Get(key);
+                list.Add(str);
+                map.Put(key, list);
             }
 
-            // Java: result.addAll(map.values());
-            result.AddRange(map.Values);
+            result.AddAll(map.Values());
 
             return result;
         }

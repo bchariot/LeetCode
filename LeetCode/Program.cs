@@ -34,6 +34,7 @@ namespace LeetCode
             CoinChange.RunCode();
             HouseRobber.RunCode();
             MinimumPathSum.RunCode();
+            PartitionEqualSubsetSum.RunCode();
             UniquePaths.RunCode();
             WordBreak.RunCode();
         }
@@ -44,6 +45,7 @@ namespace LeetCode
             FindFirstAndLastPositionOfElementInSortedArray.RunCode();
             FirstUniqueCharacter.RunCode();
             GroupedAnagrams.RunCode();
+            LongestSubstringWithKDistinctCharacters.RunCode();
             StringCompression.RunCode();
         }
 
@@ -69,6 +71,7 @@ namespace LeetCode
         static void RunMisc()
         {
             FizzBuzz.RunCode();
+            JosephusProblem.RunCode();
             MinimumDominoRotations.RunCode();
             MoveZeroes.RunCode();
             PlusOne.RunCode();

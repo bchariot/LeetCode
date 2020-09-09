@@ -15,7 +15,7 @@ namespace LeetCode.Algorithms
 
         static RandomNode CopyRandomNode(RandomNode head)
         {
-            Dictionary<int, RandomNode> map = new Dictionary<int, RandomNode>();
+            HashMap<int, RandomNode> map = new HashMap<int, RandomNode>();
             RandomNode current = head;
             RandomNode tail = null;
             RandomNode prev = null;
@@ -33,7 +33,7 @@ namespace LeetCode.Algorithms
                     tail = newNode;
                 }
 
-                map.Add(current.val, newNode);
+                map.Put(current.val, newNode);
                 prev = newNode;
                 current = current.next;
             }
@@ -43,7 +43,7 @@ namespace LeetCode.Algorithms
             {
                 if (newCurrent.random != null)
                 {
-                    RandomNode node = map[newCurrent.random.val];
+                    RandomNode node = map.Get(newCurrent.random.val);
                     newCurrent.random = node;
                 }
 
