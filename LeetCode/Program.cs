@@ -125,6 +125,7 @@ namespace LeetCode
             PartitionLabels.RunCode();
             ReverseString.RunCode();
             ReverseWordsInString.RunCode();
+            RotateArray.RunCode();
         }
 
         static void RunTreeNodes()

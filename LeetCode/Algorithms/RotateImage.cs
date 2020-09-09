@@ -18,14 +18,11 @@ namespace LeetCode.Algorithms
             int length = matrix[0].Length;
             for (int i = 0; i < matrix.Length; i++)
             {
-                for (int j = 0; j < length; j++)
+                for (int j = i; j < length; j++)
                 {
-                    if (j < i)
-                    {
-                        int temp = matrix[i][j];
-                        matrix[i][j] = matrix[j][i];
-                        matrix[j][i] = temp;
-                    }
+                    int temp = matrix[i][j];
+                    matrix[i][j] = matrix[j][i];
+                    matrix[j][i] = temp;
                 }
             }
 
