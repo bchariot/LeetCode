@@ -25,6 +25,8 @@ namespace LeetCode
 
         static void RunDFS()
         {
+            FloodFill.RunCode();
+            MaxAreaOfIsland.RunCode();
             NumberOfIslands.RunCode();
         }
 
@@ -107,10 +109,8 @@ namespace LeetCode
             CloneGraph.RunCode();
             CombinationSum.RunCode();
             FlattenBSTToDLL.RunCode();
-            FloodFill.RunCode();
             GenerateParentheses.RunCode();
             LetterPhone.RunCode();
-            MaxAreaOfIsland.RunCode();
             PermutationSequence.RunCode();
             SubSets.RunCode();
         }

@@ -10,7 +10,7 @@ namespace LeetCode.Algorithms {
         }
 
         static bool CanPart1(int[] nums) {
-            // Time Complexity: Exponential O(2^n) Space: Linear O(n)
+            // Recursion: Time Complexity: Exponential O(2^n) Space: Linear O(n)
             int total = 0;
             foreach (int num in nums) {
                 total += num;
@@ -27,7 +27,7 @@ namespace LeetCode.Algorithms {
         }
 
         static bool CanPart2(int[] nums) {
-            // Time Complexity: Polynomial O(n^2) Space: Linear O(n)
+            // Recursion with Memoization: Time Complexity: Polynomial O(n^2) Space: Linear O(n)
             int total = 0;
             foreach (int num in nums) {
                 total += num;

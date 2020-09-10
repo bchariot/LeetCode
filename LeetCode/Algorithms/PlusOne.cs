@@ -6,16 +6,18 @@ namespace LeetCode.Algorithms
 {
     public class PlusOne
     {
-        // LeetCode #. Template
+        // LeetCode #66. Plus One
         public static void RunCode()
         {
             int[] digits = new int[] { 1, 2, 3 };
-            Console.WriteLine($"    PlusOne {Print.IntArray(digits)}: {Print.IntArray(GetPlusOne(digits))}");
-            digits = new int[] { 9, 9, 8 };
-            Console.WriteLine($"    PlusOne {Print.IntArray(digits)}: {Print.IntArray(GetPlusOne(digits))}");
+            Console.WriteLine($"    PlusOne {Print.IntArray(digits)}: {Print.IntArray(GetPlusOne1(digits))}");
+            Console.WriteLine($"    PlusOne {Print.IntArray(digits)}: {Print.IntArray(GetPlusOne2(digits))}");
+            digits = new int[] { 9, 9, 9 };
+            Console.WriteLine($"    PlusOne {Print.IntArray(digits)}: {Print.IntArray(GetPlusOne1(digits))}");
+            Console.WriteLine($"    PlusOne {Print.IntArray(digits)}: {Print.IntArray(GetPlusOne2(digits))}");
         }
 
-        static int[] GetPlusOne(int[] digits)
+        static int[] GetPlusOne1(int[] digits)
         {
             int number = 0;
             for (int i = 0; i < digits.Length; i++)
@@ -35,6 +37,23 @@ namespace LeetCode.Algorithms
             }
 
             return list.ToArray();
+        }
+
+        static int[] GetPlusOne2(int[] digits)
+        {
+            for (int i = digits.Length - 1; i >= 0; i--)
+            {
+                if (digits[i] < 9)
+                {
+                    digits[i]++;
+                    return digits;
+                }
+                digits[i] = 0;
+            }
+
+            int[] result = new int[digits.Length + 1];
+            result[0] = 1;
+            return result;
         }
     }
 }

@@ -17,11 +17,6 @@ namespace LeetCode.Algorithms
 
         static string GetRemoveVowels1(string s)
         {
-            return Regex.Replace(s, "[aeiou]", "");
-        }
-
-        static string GetRemoveVowels2(string s)
-        {
             HashSet<char> set = new HashSet<char>();
             set.Add('a');
             set.Add('e');
@@ -37,6 +32,11 @@ namespace LeetCode.Algorithms
                 }
             }
             return sb.ToString();
+        }
+
+        static string GetRemoveVowels2(string s)
+        {
+            return Regex.Replace(s, "[aeiou]", "");
         }
     }
 }

@@ -15,6 +15,7 @@ namespace LeetCode.Algorithms
 
         static int GetJewelsStones(string jewels, string stones)
         {
+            // Time Complexity: Linear O(n) Space: Linear O(n)
             HashSet<char> set = new HashSet<char>();
             foreach (char ch in jewels.ToCharArray())
             {

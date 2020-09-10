@@ -36,11 +36,7 @@ namespace LeetCode.Algorithms
                 return;
             }
 
-            /* Java:
-             * String mappingString = mapping[digits.charAt(index) - '0']
-             */
-
-            string mappingString = mapping[digits.ToCharArray()[index] - '0'];
+            string mappingString = mapping[digits.CharAt(index) - '0'];
             foreach (char newChar in mappingString.ToCharArray())
             {
                 RecursiveCall(result, digits, current + newChar, index + 1, mapping);

@@ -13,7 +13,7 @@ namespace LeetCode.Algorithms {
         }
 
         static bool Is1(string s, List<string> wordDict) {
-            // brute force: Recursion:  Time Complexity: Exponential O(2^n) Space: Linear O(n)
+            // Recursion:  Time Complexity: Exponential O(2^n) Space: Linear O(n)
             if (s.Length == 0) {
                 return true;
             }
@@ -27,7 +27,7 @@ namespace LeetCode.Algorithms {
         }
 
         static bool Is2(string s, List<string> wordDict) {
-            // Top down maprization:  Time Complexity: Polynomial O(n^2) Space: Linear O(n)
+            // Recursion with Memoization:  Time Complexity: Polynomial O(n^2) Space: Linear O(n)
             if (s.Length == 0) {
                 return true;
             }

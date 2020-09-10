@@ -19,6 +19,7 @@ namespace LeetCode.Algorithms
 
         static List<int> FindMissing1(int[] nums)
         {
+            // Time Complexity: Linear O(n) Space: Constant O(1)
             List<int> result = new List<int>();
             for (int i = 1; i <= nums.Length; i++)
             {
@@ -44,6 +45,7 @@ namespace LeetCode.Algorithms
 
         static List<int> FindMissing2(int[] nums)
         {
+            // Time Complexity: Linear O(n) Space: Linear O(n)
             List<int> result = new List<int>();
             HashSet<int> set = new HashSet<int>();
 

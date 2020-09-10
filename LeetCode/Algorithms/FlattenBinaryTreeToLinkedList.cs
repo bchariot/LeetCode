@@ -1,13 +1,12 @@
 ﻿using LeetCode.Utils;
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace LeetCode.Algorithms
 {
     public class FlattenBinaryTreeToLinkedList
     {
-        // LeetCode #. Template
+        // LeetCode #114. Flatten Binary Tree to Linked List
         public static void RunCode()
         {
             TreeNode root = Populate.TreeNode(new int?[] { 1, 2, 5, 3, 4, null, 6 });

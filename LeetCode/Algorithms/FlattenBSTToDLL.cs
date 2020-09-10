@@ -31,7 +31,6 @@ namespace LeetCode.Algorithms
 
         static TreeNode RecursiveCall(TreeNode root)
         {
-            // starts at 1
             if (root == null)
             {
                 return null;

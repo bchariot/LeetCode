@@ -17,7 +17,7 @@ namespace LeetCode.Algorithms
 
         static int Search(int[] nums, int target)
         {
-            // Time Complexity: Logarithmic O(logn) Space: Logarithmic O(logn)
+            // Time Complexity: Logarithmic O(Log(n)) Space: Logarithmic O(Log(n))
             int left = 0;
             int right = nums.Length - 1;
 

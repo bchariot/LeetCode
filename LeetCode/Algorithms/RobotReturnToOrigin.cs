@@ -5,7 +5,7 @@ namespace LeetCode.Algorithms
 {
     public class RobotReturnToOrigin
     {
-        // LeetCode #. Template
+        // LeetCode #657. Robot Return to Origin
         public static void RunCode()
         {
             string moves = "UD";
@@ -22,16 +22,12 @@ namespace LeetCode.Algorithms
             }
 
             HashMap<char, int> map = new HashMap<char, int>();
-            map.Put('L', 0);
-            map.Put('R', 0);
-            map.Put('U', 0);
-            map.Put('D', 0);
 
             foreach (char c in  moves.ToCharArray())
             {
                 map.Put(c, map.GetOrDefault(c, 0) + 1);
             }
-            return map.Get('L') == map.Get('R') && map.Get('U') == map.Get('D');
+            return map.GetOrDefault('L', 0) == map.GetOrDefault('R', 0) && map.GetOrDefault('U', 0) == map.GetOrDefault('D', 0);
         }
     }
 }

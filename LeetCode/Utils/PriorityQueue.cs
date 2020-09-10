@@ -21,11 +21,21 @@ namespace Utils
 			{
 				int pi = (ci - 1) / 2; // parent index
 				if (data[ci].CompareTo(data[pi]) >= 0)
+				{
 					break; // child item is larger than (or equal) parent so we're done
+				}
 				T tmp = data[ci];
 				data[ci] = data[pi];
 				data[pi] = tmp;
 				ci = pi;
+			}
+		}
+
+		public void Add(IEnumerable<T> keys)
+        {
+			foreach (T key in keys)
+			{
+				data.Add(key);
 			}
 		}
 
