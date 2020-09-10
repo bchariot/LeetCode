@@ -1,15 +1,16 @@
-﻿using System;
+﻿using LeetCode.Utils;
+using System;
 
 namespace LeetCode.Algorithms
 {
     public class QuickSelect
     {
+        // LeetCode #?. QuickSelect
         public static void RunCode()
         {
-            int nth = 2;
             int[] list = new int[] { 51, 18, 33, 21, 22, 74 };
-            Console.WriteLine("    QuickSelect original array: [{0}]", string.Join(", ", list));
-            Console.WriteLine("    QuickSelect " + nth + "th smallest: " + GetQuickSelect(list, 0, list.Length - 1, nth));
+            int k = 2;
+            Console.WriteLine($"    QuickSelect {Print.IntArray(list)} k={k}: {GetQuickSelect(list, 0, list.Length - 1, k)}");
         }
 
         static int GetQuickSelect(int[] list, int left, int right, int k)

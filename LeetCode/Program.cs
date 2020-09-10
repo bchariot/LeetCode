@@ -32,7 +32,9 @@ namespace LeetCode
         {
             ClimbingStairs.RunCode();
             CoinChange.RunCode();
+            FibonacciNumber.RunCode();
             HouseRobber.RunCode();
+            Knapsack.RunCode();
             MinimumPathSum.RunCode();
             PartitionEqualSubsetSum.RunCode();
             UniquePaths.RunCode();
