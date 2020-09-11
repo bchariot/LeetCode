@@ -69,7 +69,10 @@ namespace LeetCode
         {
             IntersectionTwoLinkedLists.RunCode();
             MergeKSortedLists.RunCode();
+            OddEvenLinkedList.RunCode();
+            PalindromeLinkedList.RunCode();
             ReverseLinkedList.RunCode();
+            SortedList.RunCode();
         }
 
         static void RunMisc()

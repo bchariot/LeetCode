@@ -50,6 +50,11 @@ namespace LeetCode.Utils
 
         public static string ListNode(ListNode head)
         {
+            if (head == null)
+            {
+                return "null";
+            }
+
             StringBuilder sb = new StringBuilder();
             sb.Append(head.val);
             while (head.next != null)
