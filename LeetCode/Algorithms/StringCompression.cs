@@ -22,7 +22,7 @@ namespace LeetCode.Algorithms
 
         static int GetStringCompression1(char[] chars)
         {
-            // Time Complexity: Polynomial O(n^2) Space: Constant O(1)
+            // Time Complexity: Quadric O(n^2) Space: Constant O(1)
             int index = 0;
             int i = 0;
             while (i < chars.Length)
@@ -48,7 +48,7 @@ namespace LeetCode.Algorithms
 
         static int GetStringCompression2(char[] chars)
         {
-            // Time Complexity: Polynomial O(n^2) Space: Linear O(n)
+            // Time Complexity: Quadric O(n^2) Space: Linear O(n)
             HashMap<char, int> map = new HashMap<char, int>();
             foreach (char c in chars)
             {

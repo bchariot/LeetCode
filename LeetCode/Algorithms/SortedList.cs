@@ -12,7 +12,7 @@ namespace LeetCode.Algorithms {
         }
 
         static ListNode SortList1(ListNode head) {
-            // Top down: Time Complexity: O(nLog(n)) Space: O(Log(n))
+            // Top down: Time Complexity: Linearithmic O(nLog(n)) Space: Logarithmic O(Log(n))
             if (head == null || head.next == null) { return head; }
             ListNode temp = head; // end of first list
             ListNode slow = head; // start of second list

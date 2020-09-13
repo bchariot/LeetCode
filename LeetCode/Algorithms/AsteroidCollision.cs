@@ -12,9 +12,16 @@ namespace LeetCode.Algorithms
             int[] asteroids = new int[] { 5, 10, -5 };
             Console.WriteLine($"    AsteroidCollision stack {Print.IntArray(asteroids)}: {Print.IntArray(GetAsteroidCollision1(asteroids))}");
             Console.WriteLine($"    AsteroidCollision array {Print.IntArray(asteroids)}: {Print.IntArray(GetAsteroidCollision2(asteroids))}");
+            asteroids = new int[] { 8, -8 };
+            Console.WriteLine($"    AsteroidCollision stack {Print.IntArray(asteroids)}: {Print.IntArray(GetAsteroidCollision1(asteroids))}");
+            Console.WriteLine($"    AsteroidCollision array {Print.IntArray(asteroids)}: {Print.IntArray(GetAsteroidCollision2(asteroids))}");
+            asteroids = new int[] { -2, -1, 1, 2 };
+            Console.WriteLine($"    AsteroidCollision stack {Print.IntArray(asteroids)}: {Print.IntArray(GetAsteroidCollision1(asteroids))}");
+            Console.WriteLine($"    AsteroidCollision array {Print.IntArray(asteroids)}: {Print.IntArray(GetAsteroidCollision2(asteroids))}");
         }
 
         static int[] GetAsteroidCollision1(int[] asteroids) {
+            // Time Complexity: Linear O(n) Space: Linear O(n)
             Stack<int> stack = new Stack<int>();
 
             int i = 0;
@@ -22,7 +29,7 @@ namespace LeetCode.Algorithms
                 if (asteroids[i] > 0) {
                     stack.Push(asteroids[i]);
                 } else {
-                    while (stack.Count > 0 && stack.Peek() > 0 && stack.Peek() < Math.Abs(asteroids[i])) {
+                    while (!stack.IsEmpty() && stack.Peek() > 0 && stack.Peek() < Math.Abs(asteroids[i])) {
                         stack.Pop();
                     }
                     if (stack.Count == 0 || stack.Peek() < 0) {
@@ -34,6 +41,7 @@ namespace LeetCode.Algorithms
                 i++;
             }
 
+            // return whatever is left in the stack
             int[] result = new int[stack.Count];
             int count = stack.Count;
             for (i = 0; i < count; i++) {
@@ -43,6 +51,7 @@ namespace LeetCode.Algorithms
         }
 
         static int[] GetAsteroidCollision2(int[] asteroids) {
+            // Time Complexity: Linear O(n) Space: Constant O(1)
             List<int> intsA = asteroids.ToList();
             List<int> intsB = new List<int>();
             while (intsA.Count - intsB.Count > 0) {

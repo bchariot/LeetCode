@@ -10,11 +10,9 @@ namespace LeetCode.Algorithms
         // LeetCode #121. Best Time To Buy Stock
         public static void RunCode() {
             int[] prices = new int[] { 7, 1, 5, 3, 6, 4 };
-            Console.WriteLine($"    BestTimeToBuyStock math {Print.IntArray(prices)}: {MaxProfit1(prices)}");
-            Console.WriteLine($"    BestTimeToBuyStock queue {Print.IntArray(prices)}: {MaxProfit2(prices)}");
+            Console.WriteLine($"    BestTimeToBuyStock math {Print.IntArray(prices)}: {MaxProfit1(prices)}, {MaxProfit2(prices)}");
             prices = new int[] { 7, 6, 4, 3, 1 };
-            Console.WriteLine($"    BestTimeToBuyStock math {Print.IntArray(prices)}: {MaxProfit1(prices)}");
-            Console.WriteLine($"    BestTimeToBuyStock queue {Print.IntArray(prices)}: {MaxProfit2(prices)}");
+            Console.WriteLine($"    BestTimeToBuyStock math {Print.IntArray(prices)}: {MaxProfit1(prices)}, {MaxProfit2(prices)}");
         }
 
         static int MaxProfit1(int[] prices) {

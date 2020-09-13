@@ -13,5 +13,10 @@ namespace LeetCode.Utils
         {
             list.AddRange(values);
         }
+
+        public static bool IsEmpty<T>(this Stack<T> stack)
+        {
+            return stack.Count == 0;
+        }
     }
 }

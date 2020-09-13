@@ -137,5 +137,38 @@ namespace LeetCode.Utils
             sb.Append("]");
             return sb.ToString().Replace(",]", "]");
         }
+
+        public static string TreeNode(TreeNode root)
+        {
+            if (root == null)
+            {
+                return "null";
+            }
+
+            List<int?> list = new List<int?>();
+            GetTreeNodeList(root, list);
+            StringBuilder sb = new StringBuilder();
+            sb.Append("[");
+            foreach (int? num in list)
+            {
+                sb.Append(num  + ",");
+
+            }
+            sb.Append("]");
+            return sb.ToString().Replace(",]", "]");
+        }
+
+        public static void GetTreeNodeList(TreeNode root, List<int?> list)
+        {
+            list.Add(root.val);
+            if (root.left != null)
+            {
+                GetTreeNodeList(root.left, list);
+            }
+            if (root.right != null)
+            {
+                GetTreeNodeList(root.right, list);
+            }
+        }
     }
 }

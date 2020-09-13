@@ -1,4 +1,6 @@
-﻿namespace LeetCode.Utils
+﻿using System.Collections.Generic;
+
+namespace LeetCode.Utils
 {
     public class Populate
     {
@@ -103,6 +105,48 @@
             }
 
             return root;
+        }
+
+        public static Node Node(TreeNode root)
+        {
+            List<int?> list = new List<int?>();
+            Print.GetTreeNodeList(root, list);
+            return Node(list.ToArray());
+        }
+
+        public static Node Node(int?[] nums)
+        {
+            Node root = null;
+            foreach (int? num in nums)
+            {
+                if (num != null)
+                {
+                    root = InsertNode(root, new Node(num.Value));
+                }
+            }
+            return (root);
+        }
+
+        static Node InsertNode(Node node, Node child)
+        {
+            if (node == null)
+            {
+                return child;
+            }
+
+            if (child.val <= node.val)
+            {
+                node.left = InsertNode(node.left, child);
+                node.left.parent = node;
+            }
+            else
+            {
+                node.right = InsertNode(node.right, child);
+                node.right.parent = node;
+            }
+
+            return node;
+
         }
     }
 }

@@ -77,6 +77,8 @@ namespace LeetCode
 
         static void RunMisc()
         {
+            BestTimeToBuyStock.RunCode();
+            BestTimeToBuyStockII.RunCode();
             FizzBuzz.RunCode();
             JosephusProblem.RunCode();
             MinimumDominoRotations.RunCode();
@@ -98,7 +100,6 @@ namespace LeetCode
 
         static void RunQueues()
         {
-            BestTimeToBuyStock.RunCode();
             BinaryTreeLevelOrderTraversal.RunCode();
             KClosestPoints.RunCode();
             KLargestElementInArray.RunCode();
@@ -141,7 +142,9 @@ namespace LeetCode
             BinaryTreeMaximumPathSum.RunCode();
             BinaryTreePath.RunCode();
             BinaryTreeRightSideView.RunCode();
-            LowestCommonAncestor.RunCode();
+            FindUnionLCA.RunCode();
+            LowestCommonAncestorBinaryTree.RunCode();
+            LowestCommonAncestorBST.RunCode();
             PathSum.RunCode();
             RangeSumOfBST.RunCode();
             SubtreeOfAnotherTree.RunCode();

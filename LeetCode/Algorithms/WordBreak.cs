@@ -27,7 +27,7 @@ namespace LeetCode.Algorithms {
         }
 
         static bool Is2(string s, List<string> wordDict) {
-            // Recursion with Memoization:  Time Complexity: Polynomial O(n^2) Space: Linear O(n)
+            // Recursion with Memoization:  Time Complexity: Quadric O(n^2) Space: Linear O(n)
             if (s.Length == 0) {
                 return true;
             }
@@ -54,7 +54,7 @@ namespace LeetCode.Algorithms {
         }
 
         static bool Is3(string s, List<string> wordDict) {
-            // Bottom up solution:  Time Complexity: Polynomial O(n^2) Space: Linear O(n)
+            // Bottom up solution:  Time Complexity: Quadric O(n^2) Space: Linear O(n)
             if (s.Length == 0) {
                 return true;
             }
