@@ -3,7 +3,12 @@ using System;
 
 namespace LeetCode.Algorithms {
     public class PartitionEqualSubsetSum {
-        // LeetCode #416. Partition Equal Subset Sum
+        /* LeetCode #416. Partition Equal Subset Sum
+         * Given a non-empty array containing only positive integers, find if the array can be
+         * partitioned into two subsets such that the sum of elements in both subsets is equal.
+         * Note:
+         * 1. Each of the array element will not exceed 100.
+         * 2. The array size will not exceed 200.*/
         public static void RunCode() {
             int[] nums = new int[] { 1, 5, 3, 8, 5 };
             Console.WriteLine($"    PartitionEqualSubsetSum {Print.IntArray(nums)}: {CanPart1(nums)}, {CanPart2(nums)}, {CanPart3(nums)}");

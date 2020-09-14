@@ -4,7 +4,9 @@ namespace LeetCode.Algorithms
 {
     public class ValidPalindrome
     {
-        // LeetCode #125. Valid Palindrome
+        /* LeetCode #125. Valid Palindrome
+         * Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
+         * Note: For the purpose of this problem, we define empty string as valid palindrome.*/
         public static void RunCode()
         {
             string s = "Madam, I'm Adam";

@@ -5,7 +5,9 @@ namespace LeetCode.Algorithms
 {
     public class MoveZeroes
     {
-        // LeetCode #283. Moves Zeroes
+        /* LeetCode #283. Moves Zeroes
+         * Given an array nums, write a function to move all 0's to the end of it while
+         * maintaining the relative order of the non-zero elements.*/
         public static void RunCode()
         {
             int[] nums = new int[] { 0, 1, 0, 3, 12 };

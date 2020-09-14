@@ -5,7 +5,12 @@ using System.Linq;
 
 namespace LeetCode.Algorithms {
     public class WordBreak {
-        // LeetCode #139. Word Break
+        /* LeetCode #139. Word Break
+         * Given a non-empty string s and a dictionary wordDict containing a list of non-empty words,
+         * determine if s can be segmented into a space-separated sequence of one or more dictionary words.
+         * Note:
+         * The same word in the dictionary may be reused multiple times in the segmentation.
+         * You may assume the dictionary does not contain duplicate words.*/
         public static void RunCode() {
             string s = "leetcode";
             List<string> wordDict = (new string[] { "leet", "code" }).ToList();

@@ -4,7 +4,9 @@ namespace LeetCode.Algorithms
 {
     public class LongestCommonPrefix
     {
-        // LeetCode #14. Longest Common Prefix
+        /* LeetCode #14. Longest Common Prefix
+         * Write a function to find the longest common prefix string amongst an array of strings.
+         * If there is no common prefix, return an empty string "".*/
         public static void RunCode()
         {
             string[] strs1 = new string[] { "flower", "flow", "flight" };

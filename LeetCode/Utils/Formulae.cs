@@ -23,5 +23,10 @@ namespace LeetCode.Utils {
             }
             return result;
         }
+
+        public static int Factor(int n)
+        {
+            return (int)Math.Floor(Math.Log10(n) + 1);
+        }
     }
 }

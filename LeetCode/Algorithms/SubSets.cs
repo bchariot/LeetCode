@@ -7,7 +7,9 @@ namespace LeetCode.Algorithms
 {
     public class SubSets
     {
-        // LeetCode #78. Subsets
+        /* LeetCode #78. Subsets
+         * Given a set of distinct integers, nums, return all possible subsets (the power set).
+         * Note: The solution set must not contain duplicate subsets.*/
         public static void RunCode()
         {
             List<int> nums = (new int[] { 1, 2, 3 }).ToList<int>();

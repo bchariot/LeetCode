@@ -5,7 +5,8 @@ namespace LeetCode.Algorithms
 {
     public class ReverseLinkedList
     {
-        // LeetCode #206. Reverse Linked List
+        /* LeetCode #206. Reverse Linked List
+         * Reverse a singly linked list.*/
         public static void RunCode()
         {
             ListNode head = Populate.ListNode(new int[] { 1, 6, 7, 2, 4, 9 });

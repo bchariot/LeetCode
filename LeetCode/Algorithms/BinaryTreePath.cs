@@ -6,7 +6,8 @@ namespace LeetCode.Algorithms
 {
     public class BinaryTreePath
     {
-        // LeetCode #257. Binary Tree Paths
+        /* LeetCode #257. Binary Tree Paths
+         * Given a binary tree, return all root-to-leaf paths.*/
         public static void RunCode()
         {
             TreeNode root = Populate.TreeNode(new int?[] { 1, 2, 3, null, 5 });

@@ -7,7 +7,12 @@ namespace LeetCode.Algorithms
 {
     public class AsteroidCollision
     {
-        // LeetCode #735. Asteroid Collision
+        /* LeetCode #735. Asteroid Collision
+         * We are given an array asteroids of integers representing asteroids in a row.
+         * For each asteroid, the absolute value represents its size, and the sign represents its direction
+         * (positive meaning right, negative meaning left). Each asteroid moves at the same speed.
+         * Find out the state of the asteroids after all collisions. If two asteroids meet, the smaller one will explode.
+         * If both are the same size, both will explode. Two asteroids moving in the same direction will never meet. */
         public static void RunCode() {
             int[] asteroids = new int[] { 5, 10, -5 };
             Console.WriteLine($"    AsteroidCollision stack {Print.IntArray(asteroids)}: {Print.IntArray(GetAsteroidCollision1(asteroids))}");

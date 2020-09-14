@@ -107,6 +107,18 @@ namespace LeetCode.Utils
             return root;
         }
 
+        public static int[] IntArray(ListNode head)
+        {
+            List<int> list = new List<int>();
+            list.Add(head.val);
+            while (head.next != null)
+            {
+                head = head.next;
+                list.Add(head.val);
+            }
+            return list.ToArray();
+        }
+
         public static Node Node(TreeNode root)
         {
             List<int?> list = new List<int?>();
@@ -146,7 +158,6 @@ namespace LeetCode.Utils
             }
 
             return node;
-
         }
     }
 }

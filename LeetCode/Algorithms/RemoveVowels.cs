@@ -7,7 +7,8 @@ namespace LeetCode.Algorithms
 {
     public class RemoveVowels
     {
-        // LeetCode #119. Remove Vowels from a String
+        /* LeetCode #1119. Remove Vowels from a String
+         * Given a string S, remove the vowels 'a', 'e', 'i', 'o', and 'u' from it, and return the new string.*/
         public static void RunCode()
         {
             string s = "leetcodeisacommunityforcoders";

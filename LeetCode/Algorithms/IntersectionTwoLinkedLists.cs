@@ -8,7 +8,8 @@ namespace LeetCode.Algorithms
 {
     public class IntersectionTwoLinkedLists
     {
-        // LeetCode #160. Intersection of Two Linked Lists
+        /* LeetCode #160. Intersection of Two Linked Lists
+         * Write a program to find the node at which the intersection of two singly linked lists begins.*/
         public static void RunCode()
         {
             int[] a = new int[] { 4, 1, 8, 4, 5 };

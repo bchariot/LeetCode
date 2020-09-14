@@ -48,28 +48,6 @@ namespace LeetCode.Utils
             return sbi.ToString().Replace(",]", "]");
         }
 
-        public static string ListNode(ListNode head)
-        {
-            if (head == null)
-            {
-                return "null";
-            }
-
-            StringBuilder sb = new StringBuilder();
-            sb.Append(head.val);
-            while (head.next != null)
-            {
-                sb.Append("->" + head.next.val);
-                head = head.next;
-            }
-            return sb.ToString();
-        }
-
-        public static string RandomNode(RandomNode head)
-        {
-            return "";
-        }
-
         public static string ListInt(List<int> list)
         {
             StringBuilder sb = new StringBuilder();
@@ -97,6 +75,23 @@ namespace LeetCode.Utils
             }
             sb.Append("]");
             return sb.ToString().Replace(",]", "]");
+        }
+
+        public static string ListNode(ListNode head)
+        {
+            if (head == null)
+            {
+                return "null";
+            }
+
+            StringBuilder sb = new StringBuilder();
+            sb.Append(head.val);
+            while (head.next != null)
+            {
+                sb.Append("->" + head.next.val);
+                head = head.next;
+            }
+            return sb.ToString();
         }
 
         public static string ListString(List<string> list)
@@ -136,6 +131,11 @@ namespace LeetCode.Utils
             }
             sb.Append("]");
             return sb.ToString().Replace(",]", "]");
+        }
+
+        public static string RandomNode(RandomNode head)
+        {
+            return "";
         }
 
         public static string TreeNode(TreeNode root)

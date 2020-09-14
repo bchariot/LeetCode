@@ -6,7 +6,9 @@ namespace LeetCode.Algorithms
 {
     public class KLargestElementInArray
     {
-        // LeetCode #215. Kth Largest Element in an Array
+        /* LeetCode #215. Kth Largest Element in an Array
+         * Find the kth largest element in an unsorted array.
+         * Note that it is the kth largest element in the sorted order, not the kth distinct element.*/
         public static void RunCode() {
             int[] nums = new int[] { 3, 2, 1, 5, 6, 4 };
             int k = 2;

@@ -5,7 +5,8 @@ namespace LeetCode.Algorithms
 {
     public class PalindromeLinkedList
     {
-        // LeetCode #. Palindrome Linked List
+        /* LeetCode #234. Palindrome Linked List
+         * Given a singly linked list, determine if it is a palindrome.*/
         public static void RunCode()
         {
             ListNode head = Populate.ListNode(new int[] { 1, 2, 3, 2, 1 });

@@ -6,7 +6,9 @@ namespace LeetCode.Algorithms
 {
     public class MissingNumber
     {
-        // LeetCode #268. Missing Number
+        /* LeetCode #268. Missing Number
+         * Given an array containing n distinct numbers taken from 0, 1, 2, ..., n,
+         * find the one that is missing from the array.*/
         public static void RunCode()
         {
             int[] numbers = new int[] { 9, 6, 4, 2, 3, 5, 7, 0, 1 };

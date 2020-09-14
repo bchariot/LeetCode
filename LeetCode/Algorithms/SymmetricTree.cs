@@ -5,7 +5,8 @@ namespace LeetCode.Algorithms
 {
     public class SymmetricTree
     {
-        // LeetCode #101. Symmetric Tree
+        /* LeetCode #101. Symmetric Tree
+         * Given a binary tree, check whether it is a mirror of itself (ie, symmetric around its center).*/
         public static void RunCode()
         {
             TreeNode node = Populate.TreeNode(new int?[] { 1, 2, 2, 3, 4, 4, 3 });

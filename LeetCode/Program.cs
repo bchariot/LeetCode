@@ -45,18 +45,28 @@ namespace LeetCode
 
         static void RunHashMaps()
         {
+            CloneGraph.RunCode();
             CopyListWithRandomPointer.RunCode();
             FindFirstAndLastPositionOfElementInSortedArray.RunCode();
             FirstUniqueCharacter.RunCode();
             GroupedAnagrams.RunCode();
             LongestSubstringWithKDistinctCharacters.RunCode();
+            MostCommonWord.RunCode();
+            PartitionEqualSubsetSum.RunCode();
+            ReorganizeString.RunCode();
+            RobotReturnToOrigin.RunCode();
             StringCompression.RunCode();
+            TwoSum.RunCode();
+            ValidAnagram.RunCode();
+            WordBreak.RunCode();
         }
 
         static void RunHashSets()
         {
             ContainsDuplicate.RunCode();
             FindAllNumbersDisappearedInArray.RunCode();
+            FrogJump.RunCode();
+            IntersectionTwoLinkedLists.RunCode();
             JewelsStones.RunCode();
             MissingNumber.RunCode();
             MostCommonWord.RunCode();
@@ -98,14 +108,23 @@ namespace LeetCode
             WordSearch.RunCode();
         }
 
-        static void RunQueues()
+        static void RunPriorityQueues()
         {
-            BinaryTreeLevelOrderTraversal.RunCode();
+            BestTimeToBuyStock.RunCode();
             KClosestPoints.RunCode();
             KLargestElementInArray.RunCode();
             LastStoneWeight.RunCode();
+            MergeKSortedLists.RunCode();
             MinimumCostConnectSticks.RunCode();
             ReorganizeString.RunCode();
+        }
+
+        static void RunQueues()
+        {
+            BinaryTreeLevelOrderTraversal.RunCode();
+            BinaryTreeRightSideView.RunCode();
+            RangeSumOfBST.RunCode();
+            ValidateBinarySearchTree.RunCode();
         }
 
         static void RunRecursion()
@@ -125,6 +144,7 @@ namespace LeetCode
             BackspaceStringCompare.RunCode();
             FlattenBinaryTreeToLinkedList.RunCode();
             FrogJump.RunCode();
+            //MinStack;
             ValidParentheses.RunCode();
         }
 
@@ -139,10 +159,13 @@ namespace LeetCode
 
         static void RunTreeNodes()
         {
+            BinaryTreeLevelOrderTraversal.RunCode();
             BinaryTreeMaximumPathSum.RunCode();
             BinaryTreePath.RunCode();
             BinaryTreeRightSideView.RunCode();
             FindUnionLCA.RunCode();
+            FlattenBinaryTreeToLinkedList.RunCode();
+            FlattenBSTToDLL.RunCode();
             LowestCommonAncestorBinaryTree.RunCode();
             LowestCommonAncestorBST.RunCode();
             PathSum.RunCode();

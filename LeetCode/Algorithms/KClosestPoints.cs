@@ -6,7 +6,11 @@ using Utils;
 
 namespace LeetCode.Algorithms {
     public class KClosestPoints {
-        // LeetCode #973. K Closest Points to Origin
+        /* LeetCode #973. K Closest Points to Origin
+         * We have a list of points on the plane.  Find the K closest points to the origin (0, 0).
+         * (Here, the distance between two points on a plane is the Euclidean distance.)
+         * You may return the answer in any order.
+         * The answer is guaranteed to be unique (except for the order that it is in.)*/
         public static void RunCode() {
             int[][] points = Populate.IntIntArray(new int[,] { { 1, 3 }, { -2, 2 }, { 4, -1 }, { 3, 2 }, { 5, 3 }, { -1, 2 } });
             int k = 3;
@@ -31,7 +35,7 @@ namespace LeetCode.Algorithms {
              * }
              * return result;
              */
-            PriorityQueue<ListInt> maxHeap = new PriorityQueue<ListInt>();
+        PriorityQueue<ListInt> maxHeap = new PriorityQueue<ListInt>();
             foreach (int[] p in points) {
                 ListInt point = new ListInt(p);
                 maxHeap.Add(point);

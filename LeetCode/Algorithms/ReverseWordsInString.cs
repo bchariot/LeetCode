@@ -5,7 +5,8 @@ namespace LeetCode.Algorithms
 {
     public class ReverseWordsInString
     {
-        // LeetCode #151. Reverse Words in a String
+        /* LeetCode #151. Reverse Words in a String
+         * Given an input string, reverse the string word by word.*/
         public static void RunCode()
         {
             string s = "the sky is blue";

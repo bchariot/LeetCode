@@ -4,7 +4,8 @@ namespace LeetCode.Algorithms
 {
     public class PowerOfTwo
     {
-        // LeetCode #231. Power of Two
+        /* LeetCode #231. Power of Two
+         * Given an integer, write a function to determine if it is a power of two.*/
         public static void RunCode()
         {
             int n = 21564367;

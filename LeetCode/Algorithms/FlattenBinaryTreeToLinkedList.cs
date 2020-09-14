@@ -6,7 +6,8 @@ namespace LeetCode.Algorithms
 {
     public class FlattenBinaryTreeToLinkedList
     {
-        // LeetCode #114. Flatten Binary Tree to Linked List
+        /* LeetCode #114. Flatten Binary Tree to Linked List
+         * Given a binary tree, flatten it to a linked list in-place.*/
         public static void RunCode()
         {
             TreeNode root = Populate.TreeNode(new int?[] { 1, 2, 5, 3, 4, null, 6 });

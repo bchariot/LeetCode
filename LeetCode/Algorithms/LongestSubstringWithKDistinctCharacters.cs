@@ -5,7 +5,8 @@ namespace LeetCode.Algorithms
 {
     public class LongestSubstringWithKDistinctCharacters
     {
-        // LeetCode #. Longest Substring with at most K Distinct Characters
+        /* LeetCode #340. Longest Substring with at most K Distinct Characters
+         * Given a string, find the length of the longest substring T that contains at most k distinct characters.*/
         public static void RunCode()
         {
             string s = "araaci";

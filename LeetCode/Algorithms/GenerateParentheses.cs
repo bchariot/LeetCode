@@ -6,7 +6,8 @@ namespace LeetCode.Algorithms
 {
     public class GenerateParentheses
     {
-        // LeetCode #22. Generate Parentheses
+        /* LeetCode #22. Generate Parentheses
+         * Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.*/
         public static void RunCode()
         {
             int n = 4;

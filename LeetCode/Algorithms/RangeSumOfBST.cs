@@ -6,7 +6,10 @@ namespace LeetCode.Algorithms
 {
     public class RangeSumOfBST
     {
-        // LeetCode #938. Range Sum of BST
+        /* LeetCode #938. Range Sum of BST
+         * Given the root node of a binary search tree, return the sum of values
+         * of all nodes with value between L and R (inclusive).
+         * The binary search tree is guaranteed to have unique values.*/
         public static void RunCode()
         {
             TreeNode root = Populate.TreeNode(new int?[] { 10, 5, 15, 3, 7, null, 18 });

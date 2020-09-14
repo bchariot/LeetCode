@@ -1,12 +1,12 @@
 ﻿using LeetCode.Utils;
 using System;
-using System.Collections.Generic;
 
 namespace LeetCode.Algorithms
 {
     public class ValidAnagram
     {
-        // LeetCode #242. Valid Anagram
+        /* LeetCode #242. Valid Anagram
+         * Given two strings s and t , write a function to determine if t is an anagram of s.*/
         public static void RunCode()
         {
             string s = "anagram";

@@ -5,7 +5,12 @@ namespace LeetCode.Algorithms
 {
     public class MinimumDominoRotations
     {
-        // LeetCode #1007. Minimum Domino Rotations For Equal Row
+        /* LeetCode #1007. Minimum Domino Rotations For Equal Row
+         * In a row of dominoes, A[i] and B[i] represent the top and bottom halves of the i-th domino.
+         * (A domino is a tile with two numbers from 1 to 6 - one on each half of the tile.)
+         * We may rotate the i-th domino, so that A[i] and B[i] swap values.
+         * Return the minimum number of rotations so that all the values in A are the same, or all the values in B are the same.
+         * If it cannot be done, return -1.*/
         public static void RunCode()
         {
             int[] a = new int[] { 2, 1, 2, 4, 2, 2 };

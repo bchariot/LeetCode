@@ -6,7 +6,10 @@ namespace LeetCode.Algorithms
 {
     public class ContainsDuplicate
     {
-        // LeetCode #217. Contains Duplicate
+        /* LeetCode #217. Contains Duplicate
+         * Given an array of integers, find if the array contains any duplicates.
+         * Your function should return true if any value appears at least twice in the array,
+         * and it should return false if every element is distinct.*/
         public static void RunCode()
         {
             int[] nums = new int[] { 1, 2, 3, 1 };

@@ -4,7 +4,10 @@ namespace LeetCode.Algorithms
 {
     public class CoinChange
     {
-        // LeetCode #322. Coin Change
+        /* LeetCode #322. Coin Change
+         * You are given coins of different denominations and a total amount of money amount.
+         * Write a function to compute the fewest number of coins that you need to make up that amount.
+         * If that amount of money cannot be made up by any combination of the coins, return -1.*/
         public static void RunCode()
         {
             int[] coins = new int[] { 1, 2, 5 };

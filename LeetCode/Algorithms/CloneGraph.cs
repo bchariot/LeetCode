@@ -1,12 +1,14 @@
 ﻿using LeetCode.Utils;
 using System;
-using System.Collections.Generic;
 
 namespace LeetCode.Algorithms
 {
     public class CloneGraph
     {
-        // LeetCode #133. CloneGraph
+        /* LeetCode #133. Clone Graph
+         * Given a reference of a node in a connected undirected graph.
+         * Return a deep copy (clone) of the graph.
+         * Each node in the graph contains a val (int) and a list (List[Node]) of its neighbors.*/
         public static void RunCode()
         {
             GraphNode node = new GraphNode();
