@@ -1,5 +1,6 @@
 ﻿using LeetCode.Utils;
 using System;
+using System.Linq;
 
 namespace LeetCode.Algorithms {
     public class FindFirstAndLastPositionOfElementInSortedArray {
@@ -8,15 +9,19 @@ namespace LeetCode.Algorithms {
          * Your algorithm's runtime complexity must be in the order of O(log n).
          * If the target is not found in the array, return [-1, -1].*/
         public static void RunCode() {
-            int[] nums = new int[] { 5, 7, 7, 8, 8, 10 };
+            int[] nums = new int[] { 5, 7, 8, 8, 8, 10 };
             int target = 8;
             Console.WriteLine($"    FindFirstAndLast O(n) {Print.IntArray(nums)} target={target}: {Print.IntArray(SearchRange1(nums, target))}");
             Console.WriteLine($"    FindFirstAndLast O(1) {Print.IntArray(nums)} target={target}: {Print.IntArray(SearchRange2(nums, target))}");
             Console.WriteLine($"    FindFirstAndLast O(1) {Print.IntArray(nums)} target={target}: {Print.IntArray(SearchRange3(nums, target))}");
+            Console.WriteLine($"    FindFirstAndLast O(1) {Print.IntArray(nums)} target={target}: {Print.IntArray(SearchRange4(nums, target))}");
+            Console.WriteLine($"    FindFirstAndLast O(1) {Print.IntArray(nums)} target={target}: {Print.IntArray(SearchRange5(nums, target))}");
             target = 6;
             Console.WriteLine($"    FindFirstAndLast O(n) {Print.IntArray(nums)} target={target}: {Print.IntArray(SearchRange1(nums, target))}");
             Console.WriteLine($"    FindFirstAndLast O(1) {Print.IntArray(nums)} target={target}: {Print.IntArray(SearchRange2(nums, target))}");
             Console.WriteLine($"    FindFirstAndLast O(1) {Print.IntArray(nums)} target={target}: {Print.IntArray(SearchRange3(nums, target))}");
+            Console.WriteLine($"    FindFirstAndLast O(1) {Print.IntArray(nums)} target={target}: {Print.IntArray(SearchRange4(nums, target))}");
+            Console.WriteLine($"    FindFirstAndLast O(1) {Print.IntArray(nums)} target={target}: {Print.IntArray(SearchRange5(nums, target))}");
         }
 
         static int[] SearchRange1(int[] nums, int target) {
@@ -61,6 +66,60 @@ namespace LeetCode.Algorithms {
                 }
             }
             return result;
+        }
+
+        static int[] SearchRange4(int[] nums, int target) {
+            // Time Complexity: Logarithmic O(logn) Space: Logarithmic O(logn)
+            int first = GetFirst(nums, target);
+            int last = GetLast(nums, target);
+            return new int[] { first, last };
+        }
+
+        static int GetFirst(int[] nums, int target) {
+            int index = -1;
+            int start = 0;
+            int end = nums.Length - 1;
+
+            while (start <= end) {
+                int middle = start + (end - start) / 2;
+                if (nums[middle] >= target) {
+                    end = middle - 1;
+                } else {
+                    start = middle + 1;
+                }
+                if (nums[middle] == target) {
+                    index = middle;
+                }
+            }
+
+            return index;
+        }
+
+        static int GetLast(int[] nums, int target) {
+            int index = -1;
+            int start = 0;
+            int end = nums.Length - 1;
+
+            while (start <= end) {
+                int middle = start + (end - start) / 2;
+                if (nums[middle] > target) {
+                    end = middle - 1;
+                } else {
+                    start = middle + 1;
+                }
+                if (nums[middle] == target) {
+                    index = middle;
+                }
+            }
+
+            return index;
+        }
+
+        static int[] SearchRange5(int[] nums, int target) {
+            // Time Complexity: Logarithmic O(logn) Space: Logarithmic O(logn)
+            int first = Array.BinarySearch(nums, target);
+            int last = Array.BinarySearch(nums.Reverse().ToArray(), target);
+            return new int[] { first > 0 ? first : -1, last > 0 ? nums.Length - last : -1 };
         }
     }
 }

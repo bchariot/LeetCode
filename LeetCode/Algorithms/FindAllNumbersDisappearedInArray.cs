@@ -13,31 +13,27 @@ namespace LeetCode.Algorithms
         public static void RunCode()
         {
             int[] nums = new int[] { 4, 3, 2, 7, 8, 2, 3, 1 };
-            Console.WriteLine($"    FindAllNumbersDisappearedInArray O(1) {Print.IntArray(nums)}: {Print.ListInt(FindMissing1(nums))}");
-            Console.WriteLine($"    FindAllNumbersDisappearedInArray O(n) {Print.IntArray(nums)}: {Print.ListInt(FindMissing2(nums))}");
+            Console.WriteLine($"    FindAllNumbersDisappearedInArray O(n) {Print.IntArray(nums)}: {Print.ListInt(FindMissing1(nums))}");
+            Console.WriteLine($"    FindAllNumbersDisappearedInArray O(1) {Print.IntArray(nums)}: {Print.ListInt(FindMissing2(nums))}");
             nums = new int[] { 2, 2, 2, 7, 8, 2, 2, 1 };
-            Console.WriteLine($"    FindAllNumbersDisappearedInArray O(1) {Print.IntArray(nums)}: {Print.ListInt(FindMissing1(nums))}");
-            Console.WriteLine($"    FindAllNumbersDisappearedInArray O(n) {Print.IntArray(nums)}: {Print.ListInt(FindMissing2(nums))}");
+            Console.WriteLine($"    FindAllNumbersDisappearedInArray O(n) {Print.IntArray(nums)}: {Print.ListInt(FindMissing1(nums))}");
+            Console.WriteLine($"    FindAllNumbersDisappearedInArray O(1) {Print.IntArray(nums)}: {Print.ListInt(FindMissing2(nums))}");
         }
 
         static List<int> FindMissing1(int[] nums)
         {
-            // Time Complexity: Linear O(n) Space: Constant O(1)
-            List<int> result = new List<int>();
-            for (int i = 1; i <= nums.Length; i++)
+            // Time Complexity: Linear O(n) Space: Linear O(n)
+            List<int> result = new List<int>();    //Java: List<Integer> result = new ArrayList<Integer>();
+            HashSet<int> set = new HashSet<int>(); //Java: HashSet<Integer> set = new HashSet<Integer>();
+
+            foreach (int num in nums) //Java: for (int num: nums)
             {
-                if (nums[i - 1] != i)
-                {
-                    int one = nums[i - 1];
-                    int temp = nums[nums[i - 1] - 1];
-                    nums[temp - 1] = temp;
-                    nums[one - 1] = one;
-                }
+                set.Add(num);
             }
 
             for (int i = 1; i < nums.Length; i++)
             {
-                if (nums[i - 1] != i)
+                if (!set.Contains(i))
                 {
                     result.Add(i);
                 }
@@ -48,18 +44,22 @@ namespace LeetCode.Algorithms
 
         static List<int> FindMissing2(int[] nums)
         {
-            // Time Complexity: Linear O(n) Space: Linear O(n)
-            List<int> result = new List<int>();
-            HashSet<int> set = new HashSet<int>();
-
-            foreach (int num in nums)
+            // Time Complexity: Linear O(n) Space: Constant O(1)
+            List<int> result = new List<int>(); //Java: List<Integer> result = new ArrayList<Integer>();
+            for (int i = 1; i <= nums.Length; i++)
             {
-                set.Add(num);
+                if (nums[i - 1] != i)
+                {
+                    int prev = nums[i - 1];
+                    int temp = nums[prev - 1];
+                    nums[temp - 1] = temp;
+                    nums[prev - 1] = prev;
+                }
             }
 
             for (int i = 1; i < nums.Length; i++)
             {
-                if (!set.Contains(i))
+                if (nums[i - 1] != i)
                 {
                     result.Add(i);
                 }

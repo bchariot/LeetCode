@@ -4,7 +4,7 @@ namespace LeetCode
 {
     public class Template
     {
-        // LeetCode #. Template
+        /* LeetCode #. Template*/
         public static void RunCode()
         {
             Console.WriteLine($"    ");

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LeetCode.Utils;
+using System;
 
 namespace LeetCode.Algorithms
 {
@@ -12,25 +13,30 @@ namespace LeetCode.Algorithms
         {
             int[] coins = new int[] { 1, 2, 5 };
             int amount = 11;
-            Console.WriteLine($"    CoinChange # of coins [1,2,5] for amount: {amount}: {GetCoinChange(coins, amount)}");
+            Console.WriteLine($"    CoinChange # of coins {Print.IntArray(coins)} for amount: {amount}: {GetChange(coins, amount)}");
             coins = new int[] { 2, 5, 10 };
-            amount = 8;
-            Console.WriteLine($"    CoinChange # of coins [2,5,10] for amount: {amount}: {GetCoinChange(coins, amount)}");
+            amount = 3;
+            Console.WriteLine($"    CoinChange # of coins {Print.IntArray(coins)} for amount: {amount}: {GetChange(coins, amount)}");
         }
 
-        static int GetCoinChange(int[] coins, int amount)
+        static int GetChange(int[] coins, int amount)
         {
-            // Time Complexity: Quadratic O(m*n) Space: Linear O(n)
+            // Time Complexity: Quadratic O(n^2) (amount * # of coins) Space: Linear O(n)
             int[] dp = new int[amount + 1];
+            Array.Fill(dp, amount + 1); // Java: Arrays.fill(dp, amount + 1);
+            Array.Sort(coins); // Java: Arrays.sort(coins); // sort the coins first
             dp[0] = 0;
             for (int i = 1; i <= amount; i++)
             {
-                dp[i] = amount + 1;
                 for (int j = 0; j < coins.Length; j++)
                 {
                     if (coins[j] <= i)
                     {
                         dp[i] = Math.Min(dp[i], 1 + dp[i - coins[j]]);
+                    }
+                    else
+                    {
+                        break; // no point going thru bigger coins
                     }
                 }
             }

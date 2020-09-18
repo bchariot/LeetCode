@@ -18,26 +18,25 @@ namespace LeetCode.Algorithms
         static List<List<int>> LevelOrder(TreeNode root)
         {
             List<List<int>> result = new List<List<int>>();
+            if (root == null) {
+                return result;
+            }
 
             Queue<TreeNode> queue = new Queue<TreeNode>();
-            queue.Enqueue(root);
+            queue.Add(root);
 
-            while (queue.Count > 0)
-            {
+            while (!queue.IsEmpty()) {
                 List<int> current = new List<int>();
-                int size = queue.Count;
-                for (int i = 0; i < size; i++)
-                {
-                    TreeNode node = queue.Dequeue();
+                int size = queue.Size();
+                for (int i = 0; i < size; i++) {
+                    TreeNode node = queue.Remove();
                     current.Add(node.val);
 
-                    if (node.left != null)
-                    {
-                        queue.Enqueue(node.left);
+                    if (node.left != null) {
+                        queue.Add(node.left);
                     }
-                    if (node.right != null)
-                    {
-                        queue.Enqueue(node.right);
+                    if (node.right != null) {
+                        queue.Add(node.right);
                     }
                 }
                 result.Add(current);

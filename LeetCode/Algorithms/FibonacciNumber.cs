@@ -20,6 +20,9 @@ namespace LeetCode.Algorithms
         }
 
         static int Fib(int n) {
+            if (n == 0 || n == 1) {
+                return n;
+            }
             double Phi = (1 + Math.Sqrt(5)) / 2;
             double phi = (1 - Math.Sqrt(5)) / 2;
             return Convert.ToInt32((Math.Pow(Phi, n) - Math.Pow(phi, n)) / Math.Sqrt(5));

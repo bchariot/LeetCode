@@ -21,6 +21,7 @@ namespace LeetCode.Algorithms
 
         static int GetMinimum(int[] sticks)
         {
+            // Time Complexity: Linearithmic O(nLog(n)) Space: Linear O(n)
             PriorityQueue<int> queue = new PriorityQueue<int>();
             foreach (int stick in sticks)
             {

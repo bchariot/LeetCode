@@ -3,10 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace LeetCode.Algorithms
-{
-    public class AsteroidCollision
-    {
+namespace LeetCode.Algorithms {
+    public class AsteroidCollision {
         /* LeetCode #735. Asteroid Collision
          * We are given an array asteroids of integers representing asteroids in a row.
          * For each asteroid, the absolute value represents its size, and the sign represents its direction
@@ -28,7 +26,6 @@ namespace LeetCode.Algorithms
         static int[] GetAsteroidCollision1(int[] asteroids) {
             // Time Complexity: Linear O(n) Space: Linear O(n)
             Stack<int> stack = new Stack<int>();
-
             int i = 0;
             while (i < asteroids.Length) {
                 if (asteroids[i] > 0) {
@@ -45,7 +42,6 @@ namespace LeetCode.Algorithms
                 }
                 i++;
             }
-
             // return whatever is left in the stack
             int[] result = new int[stack.Count];
             int count = stack.Count;
@@ -68,7 +64,6 @@ namespace LeetCode.Algorithms
                     } else {
                         second = intsA[i + 1];
                     }
-
                     if ((first < 0 && second < 0) || (first > 0 && second > 0) || (first < 0 && second > 0)) {
                         intsB.Add(first); // both + or both - or first + and second -, add first, go to next
                     } else if (first > 0 && second < 0 && first + second != 0) {
@@ -78,11 +73,9 @@ namespace LeetCode.Algorithms
                         i++; // first and second are opposities of each other, go to 2 next
                     }
                 }
-
                 if (intsA.Count == intsB.Count) {
                     break;
                 }
-
                 intsA = intsB;
                 intsB = new List<int>();
             }

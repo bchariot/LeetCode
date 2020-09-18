@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Text;
 
 namespace LeetCode.Utils
@@ -146,29 +147,40 @@ namespace LeetCode.Utils
             }
 
             List<int?> list = new List<int?>();
-            GetTreeNodeList(root, list);
+            int level = GetTreeNodeList(root, list, 0);
             StringBuilder sb = new StringBuilder();
             sb.Append("[");
             foreach (int? num in list)
             {
-                sb.Append(num  + ",");
-
+                sb.Append((num == null ? "null" : "" + num) + ",");
             }
             sb.Append("]");
             return sb.ToString().Replace(",]", "]");
         }
 
-        public static void GetTreeNodeList(TreeNode root, List<int?> list)
+        public static int GetTreeNodeList(TreeNode root, List<int?> list, int level)
         {
+            int maxLevel = 0;
             list.Add(root.val);
             if (root.left != null)
             {
-                GetTreeNodeList(root.left, list);
+                maxLevel = Math.Max(maxLevel, level + 1);
+                GetTreeNodeList(root.left, list, level + 1);
+            }
+            else
+            {
+                list.Add(null);
             }
             if (root.right != null)
             {
-                GetTreeNodeList(root.right, list);
+                maxLevel = Math.Max(maxLevel, level + 1);
+                GetTreeNodeList(root.right, list, level + 1);
             }
+            else
+            {
+                list.Add(null);
+            }
+            return maxLevel;
         }
     }
 }

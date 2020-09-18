@@ -23,10 +23,10 @@ namespace LeetCode.Algorithms
         {
             int sum = 0;
             Queue<TreeNode> queue = new Queue<TreeNode>();
-            queue.Enqueue(node);
-            while (queue.Count > 0)
+            queue.Add(node);
+            while (queue.Size() > 0)
             {
-                TreeNode current = queue.Dequeue();
+                TreeNode current = queue.Remove();
                 if (current.val >= l && current.val <= r)
                 {
                     sum += current.val;
@@ -34,12 +34,12 @@ namespace LeetCode.Algorithms
 
                 if (current.left != null && current.val >= l)
                 {
-                    queue.Enqueue(current.left);
+                    queue.Add(current.left);
                 }
 
                 if (current.right != null && current.val <= r)
                 {
-                    queue.Enqueue(current.right);
+                    queue.Add(current.right);
                 }
             }
             return sum;

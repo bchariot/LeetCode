@@ -34,6 +34,7 @@ namespace LeetCode
         {
             ClimbingStairs.RunCode();
             CoinChange.RunCode();
+            CoinChangeII.RunCode();
             FibonacciNumber.RunCode();
             HouseRobber.RunCode();
             Knapsack.RunCode();
@@ -91,6 +92,8 @@ namespace LeetCode
             BestTimeToBuyStockII.RunCode();
             FizzBuzz.RunCode();
             JosephusProblem.RunCode();
+            LongestContinuousIncreasingSubsequence.RunCode();
+            LongestIncreasingSubsequence.RunCode();
             MinimumDominoRotations.RunCode();
             MoveZeroes.RunCode();
             PlusOne.RunCode();

@@ -22,6 +22,7 @@ namespace LeetCode.Algorithms
 
         static bool HasDuplicate(int[] nums)
         {
+            // Time Complexity: Linear O(n) Space: Linear O(n)
             HashSet<int> set = new HashSet<int>();
             foreach (int num in nums)
             {

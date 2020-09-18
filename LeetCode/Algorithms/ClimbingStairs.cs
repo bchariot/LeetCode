@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LeetCode.Utils;
+using System;
 
 namespace LeetCode.Algorithms
 {
@@ -9,10 +10,10 @@ namespace LeetCode.Algorithms
         public static void RunCode()
         {
             int n = 20;
-            Console.WriteLine($"    Number of distinct ways to reach the top of {n} stairs by climbing 1 or 2 steps at a time: {GetClimbingStairs(n)}");
+            Console.WriteLine($"    ClimbingStairs {n} stairs: {GetClimbingStairs1(n)}, {GetClimbingStairs2(n)}");
         }
 
-        static int GetClimbingStairs(int n)
+        static int GetClimbingStairs1(int n)
         {
             int[] dp = new int[n + 1];
             dp[0] = 1;
@@ -24,6 +25,11 @@ namespace LeetCode.Algorithms
             }
 
             return dp[n];
+        }
+
+        static int GetClimbingStairs2(int n)
+        {
+            return Formulae.Fib(n + 1);
         }
     }
 }

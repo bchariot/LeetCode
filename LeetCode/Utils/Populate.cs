@@ -122,7 +122,7 @@ namespace LeetCode.Utils
         public static Node Node(TreeNode root)
         {
             List<int?> list = new List<int?>();
-            Print.GetTreeNodeList(root, list);
+            Print.GetTreeNodeList(root, list, 0);
             return Node(list.ToArray());
         }
 

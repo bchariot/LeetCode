@@ -17,30 +17,23 @@ namespace LeetCode.Algorithms
 
         static List<int> GetRightSideView(TreeNode root) {
             List<int> visibleValues = new List<int>();
-
-            // Java:
-            // Queue<TreeNode> queue = new LinkedList<TreeNode>();
-            // queue.add(root);
             Queue<TreeNode> queue = new Queue<TreeNode>();
-            queue.Enqueue(root);
-            int size = queue.Count;
+            queue.Add(root);
+            int size = queue.Size();
             while (size > 0) {
-                size = queue.Count;
+                size = queue.Size();
                 for (int i = 0; i < size; i++) {
-                    // Java:
-                    // TreeNode current = queue.remove();
-                    TreeNode current = queue.Dequeue();
+                    TreeNode current = queue.Remove();
                     if (i == size - 1) {
                         visibleValues.Add(current.val);
                     }
                     if (current.left != null) {
-                        queue.Enqueue(current.left);
+                        queue.Add(current.left);
                     }
                     if (current.right != null) {
-                        queue.Enqueue(current.right);
+                        queue.Add(current.right);
                     }
                 }
-
             }
 
             return visibleValues;
@@ -49,20 +42,20 @@ namespace LeetCode.Algorithms
         static List<int> GetLeftSideView(TreeNode root) {
             List<int> visibleValues = new List<int>();
             Queue<TreeNode> queue = new Queue<TreeNode>();
-            queue.Enqueue(root);
-            int size = queue.Count;
+            queue.Add(root);
+            int size = queue.Size();
             while (size > 0) {
-                size = queue.Count;
+                size = queue.Size();
                 for (int i = 0; i < size; i++) {
-                    TreeNode current = queue.Dequeue();
+                    TreeNode current = queue.Remove();
                     if (i == 0) {
                         visibleValues.Add(current.val);
                     }
                     if (current.left != null) {
-                        queue.Enqueue(current.left);
+                        queue.Add(current.left);
                     }
                     if (current.right != null) {
-                        queue.Enqueue(current.right);
+                        queue.Add(current.right);
                     }
                 }
             }
